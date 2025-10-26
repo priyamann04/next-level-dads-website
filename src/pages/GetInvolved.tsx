@@ -21,8 +21,8 @@ const GetInvolved = () => {
         "Are you an organization that supports families? Partner with Next Level Dads to expand your reach and create greater impact together.",
       action: "Partnership Inquiry",
       link: "https://forms.google.com/partner",
-      color: "text-secondary",
-      bgColor: "bg-secondary/10",
+      color: "text-primary",
+      bgColor: "bg-primary/10",
     },
     {
       icon: DollarSign,
@@ -41,8 +41,8 @@ const GetInvolved = () => {
         "Join our Dad + Me events and community gatherings. Connect with other fathers, participate in bonding activities, and build lasting relationships.",
       action: "View Events",
       link: "/contact",
-      color: "text-secondary",
-      bgColor: "bg-secondary/10",
+      color: "text-primary",
+      bgColor: "bg-primary/10",
     },
   ];
 
