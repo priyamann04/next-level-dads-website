@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -72,22 +72,6 @@ const Contact = () => {
                       >
                         info@nextleveldads.ca
                       </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-5 w-5 text-secondary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Location</h3>
-                      <p className="text-sm text-muted-foreground">
-                        University of Toronto
-                        <br />
-                        St. George Campus
-                        <br />
-                        Toronto, ON
-                      </p>
                     </div>
                   </div>
 

@@ -123,23 +123,23 @@ const GetInvolved = () => {
           <Card className="border-2 border-primary">
             <CardHeader>
               <CardTitle className="text-3xl text-center">
-                Students: Join Our Team
+                Join Our Team
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <p className="text-muted-foreground text-center leading-relaxed">
-                As a student-led initiative, we're always looking for passionate
-                University of Toronto students to join our Enactus project team.
+                We're always looking for passionate individuals to join our mission
+                of empowering fathers and strengthening families.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <h3 className="font-semibold text-lg">Roles Available:</h3>
                   <ul className="space-y-1 text-muted-foreground">
-                    <li>• Project Management</li>
-                    <li>• Technology & Development</li>
-                    <li>• Marketing & Communications</li>
-                    <li>• Event Planning</li>
-                    <li>• Research & Content</li>
+                    <li>• Marketing & Design</li>
+                    <li>• Operations & Events</li>
+                    <li>• Outreach & Community Engagement</li>
+                    <li>• Research & Program Development</li>
+                    <li>• Software Developer</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
