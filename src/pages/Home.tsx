@@ -11,12 +11,12 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-4 duration-1000">
-              Empowering Fathers, Strengthening Families
+              Next Level Dads
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
-              Building a supportive community where fathers connect, grow, and
-              thrive together. Join us in creating lasting bonds and meaningful
-              experiences.
+              Empowering fathers and strengthening families through connection, 
+              conversation, and community. Join us in creating lasting bonds and 
+              meaningful experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
               <Button asChild size="lg" className="text-lg group">
@@ -97,9 +97,9 @@ const Home = () => {
               Be Part of the Movement
             </h2>
             <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-              Whether you're a father looking for support, a volunteer wanting to
-              make a difference, or an organization interested in partnering with
-              us, there's a place for you here.
+              Whether you're a father looking for support or wanting to
+              make a difference in the lives of dads and families,
+              there's a place for you here.
             </p>
             <Button
               asChild

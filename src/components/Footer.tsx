@@ -14,9 +14,6 @@ const Footer = () => {
               Empowering fathers and strengthening families through connection,
               conversation, and community.
             </p>
-            <p className="text-xs text-muted-foreground italic">
-              A student-led initiative under Enactus UTSG
-            </p>
           </div>
 
           {/* Quick Links */}

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Target, Award } from "lucide-react";
+import fatherSonImage from "@/assets/father-son.jpg";
 
 const About = () => {
   return (
@@ -9,35 +10,41 @@ const About = () => {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Next Level Dads</h1>
           <p className="text-xl text-muted-foreground">
-            A student-led initiative empowering fathers through community,
-            connection, and continuous growth.
+            Empowering fathers through community, connection, and continuous growth.
           </p>
         </div>
 
-        {/* Our Story */}
+        {/* Photo and Story */}
         <section className="max-w-4xl mx-auto mb-16">
           <Card className="border-2">
             <CardContent className="pt-8">
-              <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+              <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
+                <div>
+                  <img 
+                    src={fatherSonImage} 
+                    alt="Father and son"
+                    className="rounded-lg shadow-lg w-full h-auto"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-3xl font-bold mb-4">Our Story</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Next Level Dads began as a vision to address a critical gap in
+                    community support for fathers. Recognizing that fatherhood can be
+                    both rewarding and challenging, I saw an opportunity to create something
+                    meaningful that could make a real difference in the lives of dads and their families.
+                  </p>
+                </div>
+              </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Next Level Dads began as a vision to address a critical gap in
-                  community support for fathers. Recognizing that fatherhood can be
-                  both rewarding and challenging, our founding team at the
-                  University of Toronto saw an opportunity to create something
-                  meaningful.
+                  Our mission is simple but powerful: to empower fathers and strengthen families
+                  through connection, conversation, and community support.
                 </p>
                 <p>
-                  As part of <span className="font-semibold text-foreground">Enactus UTSG</span>, 
-                  a community of student leaders committed to creating positive impact 
-                  through entrepreneurial action, we launched Next Level Dads with a 
-                  simple but powerful mission: to empower fathers and strengthen families.
-                </p>
-                <p>
-                  What started as conversations among passionate students has grown
-                  into a comprehensive platform designed to provide fathers with the
-                  resources, connections, and support they need to thrive. We're
-                  building more than just an app—we're building a movement.
+                  What started as a vision has grown into a comprehensive platform designed 
+                  to provide fathers with the resources, connections, and support they need 
+                  to thrive. We're building more than just an app—we're building a movement.
                 </p>
               </div>
             </CardContent>
@@ -89,45 +96,23 @@ const About = () => {
           </div>
         </section>
 
-        {/* Enactus Connection */}
-        <section className="max-w-4xl mx-auto mb-16">
-          <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2">
-            <CardContent className="pt-8">
-              <h2 className="text-3xl font-bold mb-6">Part of Enactus UTSG</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                <span className="font-semibold text-foreground">Enactus</span> is 
-                an international organization that brings together student, academic, 
-                and business leaders committed to using the power of entrepreneurial 
-                action to transform lives and shape a better, more sustainable world.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                At the University of Toronto St. George campus, our Enactus team
-                develops innovative projects that create positive social impact.
-                Next Level Dads represents our commitment to strengthening families
-                and building stronger communities through student-led initiative and
-                social entrepreneurship.
-              </p>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Team Section */}
+        {/* Mission & Team */}
         <section className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-6">Our Student Leadership Team</h2>
+          <h2 className="text-3xl font-bold text-center mb-6">Join Our Mission</h2>
           <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Next Level Dads is powered by a dedicated team of University of Toronto
-            students passionate about creating positive social change.
+            Next Level Dads is dedicated to creating meaningful connections and
+            providing valuable resources for fathers everywhere.
           </p>
           <Card className="border-2">
             <CardContent className="pt-8">
               <div className="text-center">
                 <p className="text-lg text-muted-foreground mb-6">
-                  Our diverse team brings together expertise in business,
-                  technology, social work, and design to build a platform that
-                  truly serves fathers and families.
+                  We're building a platform that truly serves fathers and families,
+                  bringing together resources, community support, and opportunities
+                  for growth and connection.
                 </p>
                 <p className="text-muted-foreground">
-                  We're always looking for passionate students and volunteers to
+                  We're always looking for passionate volunteers and supporters to
                   join our mission. If you're interested in making a difference,
                   we'd love to hear from you.
                 </p>
