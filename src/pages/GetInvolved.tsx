@@ -77,7 +77,7 @@ const GetInvolved = () => {
                 </p>
                 <Button
                   asChild
-                  variant={index % 2 === 0 ? "default" : "secondary"}
+                  variant="default"
                   className="w-full"
                 >
                   <a
