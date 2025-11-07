@@ -30,6 +30,66 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Mission Section */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
+            <p className="text-lg text-muted-foreground mb-4">
+              Next Level Dads is a social enterprise dedicated to helping fathers build genuine, lasting connections. We believe that every dad deserves friendship, community, and a sense of belonging.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              Our mission is to make it easier for fathers to meet and support one another through shared experiences and meaningful conversation — both online and in person. By fostering real relationships, we aim to reduce isolation, strengthen families, and create a community where dads feel seen, valued, and connected.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="border-2 hover:border-primary transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Users className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Connection</h3>
+                  <p className="text-muted-foreground">
+                    Meet and connect with other dads, share experiences, and build lasting friendships in a supportive community.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <MessageCircle className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Community</h3>
+                  <p className="text-muted-foreground">
+                    Join local and interest-based groups where you can share the journey of fatherhood with others who understand.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Heart className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Belonging</h3>
+                  <p className="text-muted-foreground">
+                    Find your place in a welcoming community where every dad is valued and supported on their unique journey.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="container mx-auto px-4">
@@ -82,66 +142,6 @@ const Home = () => {
                 <div className="text-5xl md:text-6xl font-bold text-primary mb-2">24/7</div>
                 <p className="text-lg text-muted-foreground">Community Support</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
-            <p className="text-lg text-muted-foreground mb-4">
-              Next Level Dads is a social enterprise dedicated to helping fathers build genuine, lasting connections. We believe that every dad deserves friendship, community, and a sense of belonging.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              Our mission is to make it easier for fathers to meet and support one another through shared experiences and meaningful conversation — both online and in person. By fostering real relationships, we aim to reduce isolation, strengthen families, and create a community where dads feel seen, valued, and connected.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-2 hover:border-primary transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Connection</h3>
-                  <p className="text-muted-foreground">
-                    Meet and connect with other dads, share experiences, and build lasting friendships in a supportive community.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:border-primary transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <MessageCircle className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Community</h3>
-                  <p className="text-muted-foreground">
-                    Join local and interest-based groups where you can share the journey of fatherhood with others who understand.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:border-primary transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Heart className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Belonging</h3>
-                  <p className="text-muted-foreground">
-                    Find your place in a welcoming community where every dad is valued and supported on their unique journey.
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
