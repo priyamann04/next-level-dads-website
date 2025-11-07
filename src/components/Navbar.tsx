@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-transparent.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,10 +10,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Features", path: "/features" },
-    { name: "Get Involved", path: "/get-involved" },
-    { name: "Contact", path: "/contact" },
+    { name: "About", path: "/about" },
+    { name: "The App", path: "/features" },
+    { name: "Join Our Mission", path: "/get-involved" },
   ];
 
   const isActive = (path: string) => location.pathname === path;

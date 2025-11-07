@@ -1,18 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  ArrowRight, 
-  Users, 
-  MessageCircle, 
-  Calendar,
-  Shield,
-  Lock,
-  CreditCard,
-  AlertCircle,
-  MapPin,
-  QrCode
-} from "lucide-react";
+import { Users, Heart, HandshakeIcon, MessageCircle, Calendar, MapPin, Shield, AlertCircle, CreditCard, Lock } from "lucide-react";
 
 const Home = () => {
   return (
@@ -27,17 +16,14 @@ const Home = () => {
                   Join communities and find community.
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                  A simple way for dads to connect — one genuine friendship at a time.
+                  Next Level Dads
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
-                  Meet local dads by life stage and shared interests. Join communities, chat one-to-one, and attend events.
+                  Connect with fathers to find friendship, community, and belonging. One connection at a time.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-                  <Button asChild size="lg" className="text-lg group">
-                    <a href="https://forms.gle/beta-signup" target="_blank" rel="noopener noreferrer">
-                      Get the App (Beta)
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                  <Button asChild size="lg" className="text-lg">
+                    <Link to="/features">Learn More</Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="text-lg">
                     <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
@@ -45,19 +31,6 @@ const Home = () => {
                     </a>
                   </Button>
                 </div>
-              </div>
-              
-              {/* QR Code Block */}
-              <div className="flex justify-center md:justify-end">
-                <Card className="p-6 text-center bg-card hover:shadow-lg transition-shadow">
-                  <CardContent className="p-0">
-                    <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center mb-4 mx-auto">
-                      <QrCode className="w-32 h-32 text-muted-foreground" />
-                    </div>
-                    <p className="text-sm font-semibold text-foreground mb-2">Scan to join the beta</p>
-                    <p className="text-xs text-muted-foreground">iOS & Android</p>
-                  </CardContent>
-                </Card>
               </div>
             </div>
           </div>
@@ -321,54 +294,34 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Band */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="text-center md:text-left">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-                  Be first to try the app
-                </h2>
-                <p className="text-lg text-primary-foreground/90 mb-6">
-                  Join the beta and help us build the future of dad connections
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="secondary"
-                    className="text-lg bg-background text-foreground hover:bg-background/90"
-                  >
-                    <a href="https://forms.gle/beta-signup" target="_blank" rel="noopener noreferrer">
-                      Join the Beta
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-                  >
-                    <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
-                      Join the Mailing List
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              {/* QR Code Repeat */}
-              <div className="flex justify-center md:justify-end">
-                <Card className="p-6 text-center bg-background">
-                  <CardContent className="p-0">
-                    <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center mb-4 mx-auto">
-                      <QrCode className="w-32 h-32 text-muted-foreground" />
-                    </div>
-                    <p className="text-sm font-semibold text-foreground mb-2">Scan to join the beta</p>
-                    <p className="text-xs text-muted-foreground">iOS & Android</p>
-                  </CardContent>
-                </Card>
-              </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+              Be first to try the app
+            </h2>
+            <p className="text-lg text-primary-foreground/90 mb-8">
+              Join our mailing list to stay updated on our launch and be part of building the future of dad connections.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="text-lg bg-background text-foreground hover:bg-background/90"
+              >
+                <Link to="/features">Learn More</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
+                  Join the Mailing List
+                </a>
+              </Button>
             </div>
           </div>
         </div>

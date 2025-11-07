@@ -29,22 +29,23 @@ const About = () => {
                 <div>
                   <h2 className="text-3xl font-bold mb-4">Our Story</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Next Level Dads began as a vision to address a critical gap in
-                    community support for fathers. Recognizing that fatherhood can be
-                    both rewarding and challenging, I saw an opportunity to create something
-                    meaningful that could make a real difference in the lives of dads and their families.
+                    Next Level Dads was created to empower fathers and strengthen families through 
+                    genuine connection. Our goal is to reduce isolation among dads and build supportive 
+                    communities across Canada.
                   </p>
                 </div>
               </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Our mission is simple but powerful: to empower fathers and strengthen families
-                  through connection, conversation, and community support.
+                  We recognized that many fathers experience isolation and lack opportunities to 
+                  build meaningful friendships with other dads. Through our platform, we're changing 
+                  that by creating spaces where fathers can connect, share experiences, and support 
+                  one another.
                 </p>
                 <p>
-                  What started as a vision has grown into a comprehensive platform designed 
-                  to provide fathers with the resources, connections, and support they need 
-                  to thrive. We're building more than just an app—we're building a movement.
+                  What started as a vision has grown into a movement. We're not just building an 
+                  app—we're building a community where every dad can find friendship, belonging, 
+                  and the support they need to thrive.
                 </p>
               </div>
             </CardContent>
