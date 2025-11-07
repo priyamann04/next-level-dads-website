@@ -11,8 +11,9 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "The App", path: "/features" },
-    { name: "Join Our Mission", path: "/get-involved" },
+    { name: "Next Level Dads App", path: "/features" },
+    { name: "Get Involved", path: "/get-involved" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;

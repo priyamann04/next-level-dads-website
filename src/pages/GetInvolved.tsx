@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Handshake, DollarSign, Calendar } from "lucide-react";
+import { Heart, Handshake, DollarSign } from "lucide-react";
 
 const GetInvolved = () => {
   const opportunities = [
@@ -8,7 +8,7 @@ const GetInvolved = () => {
       icon: Heart,
       title: "Volunteer",
       description:
-        "Join our team of dedicated volunteers. Help organize events, moderate forums, or contribute your skills to help fathers and families thrive.",
+        "Help us build community for dads—remote or in person. Flexible roles across outreach, design, operations, partnerships, and research. No long-term commitment required.",
       action: "Volunteer Application",
       link: "https://forms.google.com/volunteer",
       color: "text-primary",
@@ -28,19 +28,9 @@ const GetInvolved = () => {
       icon: DollarSign,
       title: "Support Our Mission",
       description:
-        "Your financial support helps us create resources, host events, and build technology that serves fathers and families in need.",
+        "Help us reach more dads across Canada. Sponsor a community, fund outreach, or contribute in-kind support (printing, venues, snacks, childcare). Every contribution strengthens families.",
       action: "Make a Contribution",
       link: "https://forms.google.com/donate",
-      color: "text-primary",
-      bgColor: "bg-primary/10",
-    },
-    {
-      icon: Calendar,
-      title: "Attend Events",
-      description:
-        "Join our Dad + Me events and community gatherings. Connect with other fathers, participate in bonding activities, and build lasting relationships.",
-      action: "View Events",
-      link: "/contact",
       color: "text-primary",
       bgColor: "bg-primary/10",
     },

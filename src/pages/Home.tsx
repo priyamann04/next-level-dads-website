@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Heart, HandshakeIcon, MessageCircle, Calendar, MapPin, Shield, AlertCircle, CreditCard, Lock } from "lucide-react";
+import { Users, Heart, MessageCircle } from "lucide-react";
 
 const Home = () => {
   return (
@@ -37,43 +37,78 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Mission Section */}
       <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Next Level Dads is a social enterprise dedicated to helping fathers build real connections. We believe that every dad deserves friendship, community, and a sense of belonging.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Building Community Together</h2>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-2">100+</div>
+                <p className="text-lg text-muted-foreground">Dads Connected</p>
+              </div>
+              <div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-2">50+</div>
+                <p className="text-lg text-muted-foreground">Events Hosted</p>
+              </div>
+              <div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-2">24/7</div>
+                <p className="text-lg text-muted-foreground">Community Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg">
+              <Card className="border-2 hover:border-primary transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">One-on-one connections</h3>
+                  <h3 className="text-xl font-semibold mb-3">Connection</h3>
                   <p className="text-muted-foreground">
-                    Match with dads by fatherhood stage and interests — from newborn to teens and beyond.
+                    Meet and connect with other dads, share experiences, and build lasting friendships in a supportive community.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg">
+              <Card className="border-2 hover:border-primary transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <MessageCircle className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Communities & group chats</h3>
+                  <h3 className="text-xl font-semibold mb-3">Community</h3>
                   <p className="text-muted-foreground">
-                    Join communities in your city and around shared interests, then hop into group chats to plan meetups.
+                    Join local and interest-based groups where you can share the journey of fatherhood with others who understand.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg">
+              <Card className="border-2 hover:border-primary transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Calendar className="h-6 w-6 text-primary" />
+                    <Heart className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Events (with easy checkout)</h3>
+                  <h3 className="text-xl font-semibold mb-3">Belonging</h3>
                   <p className="text-muted-foreground">
-                    Discover local dad-led or partner-hosted events and pay securely in-app. Instant confirmation.
+                    Find your place in a welcoming community where every dad is valued and supported on their unique journey.
                   </p>
                 </CardContent>
               </Card>
@@ -82,218 +117,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
-                  1
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Create your profile</h3>
-                <p className="text-muted-foreground">
-                  Choose your city & province, fatherhood stage, interests, and a short bio.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
-                  2
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Connect & chat</h3>
-                <p className="text-muted-foreground">
-                  See compatible matches and start a one-to-one conversation.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
-                  3
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Join communities & events</h3>
-                <p className="text-muted-foreground">
-                  Browse groups, jump into chats, and register for events with simple, secure checkout.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Communities Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Find your people</h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Join communities in your city and around shared interests
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Saturday Coffee Dads</h3>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                    <MapPin className="h-4 w-4" />
-                    <span>Local community</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    Weekly meetups for casual coffee and conversation
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Tech & Gaming Dads</h3>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                    <MapPin className="h-4 w-4" />
-                    <span>Interest-based</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    Connect over tech, gaming, and digital parenting
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Outdoors & Hiking Dads</h3>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                    <MapPin className="h-4 w-4" />
-                    <span>Activity-based</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    Explore nature together with your kids
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Safety & Privacy Section */}
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Built for trust</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Shield className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Report & block tools</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Easy-to-use safety features to protect your experience
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <AlertCircle className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Community guidelines</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Clear standards that keep our community respectful
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CreditCard className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Secure payments (Stripe)</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Bank-level encryption for all event payments
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Lock className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">We don't sell your data</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Your privacy is protected — always
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="text-center mt-8">
-              <div className="flex gap-4 justify-center text-sm">
-                <a href="#" className="text-primary hover:underline">Privacy Policy</a>
-                <span className="text-muted-foreground">•</span>
-                <a href="#" className="text-primary hover:underline">Terms</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            <div className="space-y-6">
-              <Card>
-                <CardContent className="pt-6">
-                  <h3 className="text-lg font-semibold mb-2">Is this a mobile app?</h3>
-                  <p className="text-muted-foreground">
-                    Yes — iOS and Android (beta). The website is a simple landing page for info and sign-ups.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <h3 className="text-lg font-semibold mb-2">How much does it cost?</h3>
-                  <p className="text-muted-foreground">
-                    Creating a profile and connecting is free. Some events may have a fee set by hosts.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <h3 className="text-lg font-semibold mb-2">Who runs Next Level Dads?</h3>
-                  <p className="text-muted-foreground">
-                    A Canada-based social enterprise focused on empowering fathers and strengthening families.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
