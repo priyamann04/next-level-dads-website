@@ -279,7 +279,7 @@ const Features = () => {
                   Explore the Demo
                 </h2>
                 <p className="text-lg text-primary-foreground/90 mb-6">
-                  Get a preview of what the Next Level Dads app could look like. Explore the demo experience, then join the mailing list to test the real app when it launches.
+                  Get a preview of what the Next Level Dads app could look like. Explore the demo experience, then fill out the interest form if you would like to test the real app, share feedback, or stay involved.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Button
