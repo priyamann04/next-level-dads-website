@@ -139,7 +139,7 @@ const Features = () => {
                     <span>Interest-based</span>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Connect over tech, gaming, and digital parenting
+                    Connect with other dads through tech and gaming.
                   </p>
                 </CardContent>
               </Card>
@@ -155,7 +155,7 @@ const Features = () => {
                     <span>Activity-based</span>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Explore nature together with your kids
+                    Join hikes and outdoor meetups with other dads.
                   </p>
                 </CardContent>
               </Card>
