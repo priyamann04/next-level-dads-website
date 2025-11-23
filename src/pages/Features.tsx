@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { 
+import { Button } from "@/components/ui/button";
+import {
   MessageSquare, 
   Users, 
   Calendar,
@@ -275,22 +276,32 @@ const Features = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="text-center md:text-left">
                 <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-                  Stay updated on our launch
+                  Explore the Demo
                 </h2>
                 <p className="text-lg text-primary-foreground/90 mb-6">
-                  Join our mailing list to be the first to know when the app is available.
+                  Get a preview of what the Next Level Dads app could look like. Explore the demo experience, then join the mailing list to test the real app when it launches.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                  <a
-                    href="https://forms.gle/mailing-list"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block"
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="secondary"
+                    className="text-lg bg-background text-foreground hover:bg-background/90"
                   >
-                    <button className="w-full sm:w-auto px-6 py-3 text-lg font-semibold rounded-md bg-background text-foreground hover:bg-background/90 transition-colors">
+                    <a href="https://forms.gle/demo" target="_blank" rel="noopener noreferrer">
+                      View Demo
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                  >
+                    <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
                       Join the Mailing List
-                    </button>
-                  </a>
+                    </a>
+                  </Button>
                 </div>
               </div>
 
@@ -301,8 +312,7 @@ const Features = () => {
                     <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center mb-4 mx-auto">
                       <QrCode className="w-32 h-32 text-muted-foreground" />
                     </div>
-                    <p className="text-sm font-semibold text-foreground mb-2">Scan for updates</p>
-                    <p className="text-xs text-muted-foreground">Join the mailing list</p>
+                    <p className="text-sm font-semibold text-foreground mb-2">Scan to view the Interest Form</p>
                   </CardContent>
                 </Card>
               </div>
