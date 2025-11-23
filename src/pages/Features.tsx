@@ -243,7 +243,7 @@ const Features = () => {
                 <CardContent className="pt-6">
                   <h3 className="text-lg font-semibold mb-2">Is this a mobile app?</h3>
                   <p className="text-muted-foreground">
-                    Yes — iOS and Android. The website is a simple landing page for info and sign-ups.
+                    Not yet. Right now, Next Level Dads is a web-based platform you can use on your phone or computer. A mobile app version is planned for the future.
                   </p>
                 </CardContent>
               </Card>
@@ -259,9 +259,9 @@ const Features = () => {
 
               <Card>
                 <CardContent className="pt-6">
-                  <h3 className="text-lg font-semibold mb-2">Who runs Next Level Dads?</h3>
+                  <h3 className="text-lg font-semibold mb-2">What is Next Level Dads?</h3>
                   <p className="text-muted-foreground">
-                    A Canada-based social enterprise focused on empowering fathers and strengthening families.
+                    Next Level Dads is a Canadian-based social enterprise focused on helping fathers connect, build friendships, and find community.
                   </p>
                 </CardContent>
               </Card>
