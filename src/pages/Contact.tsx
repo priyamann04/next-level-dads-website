@@ -92,11 +92,11 @@ const Contact = () => {
 
             <Card className="bg-gradient-to-br from-primary/5 to-secondary/5">
               <CardHeader>
-                <CardTitle>Join Our Newsletter</CardTitle>
+                <CardTitle>Join Our Mailing List</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Stay updated on events, resources, and community news.
+                  Stay informed about app updates, events, and ways to get involved.
                 </p>
                 <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
                   <Input
