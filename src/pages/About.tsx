@@ -35,12 +35,12 @@ const About = () => {
                   <p>
                     As I spoke to more dads, I noticed something powerful. While fatherhood comes with deep commitment and responsibility, many fathers don't always feel seen, supported, or connected to others who truly understand. They wanted encouragement, community, and real conversations, but there were very few places where they could find it.
                   </p>
-                  <p>
-                    That is what inspired Next Level Dads.
-                  </p>
                 </div>
               </div>
-              <div className="mt-8 text-muted-foreground leading-relaxed text-base">
+              <div className="mt-8 space-y-4 text-muted-foreground leading-relaxed text-base">
+                <p>
+                  That is what inspired Next Level Dads.
+                </p>
                 <p>
                   We are building an app designed to help fathers connect one-on-one, share experiences, and build meaningful friendships. By making it easier for dads to meet, talk, and support each other, we hope to help dads feel valued, empowered, and part of a genuine community.
                 </p>
