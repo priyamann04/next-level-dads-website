@@ -123,8 +123,8 @@ const GetInvolved = () => {
               <p className="text-muted-foreground text-center leading-relaxed -mt-4">
                 Help Build the Next Level Dads App and Community
               </p>
-              <div className="grid md:grid-cols-2 gap-6 md:gap-24">
-                <div className="space-y-2 md:pl-8">
+              <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+                <div className="space-y-2 md:pl-24">
                   <h3 className="font-semibold text-lg">Roles Available:</h3>
                   <ul className="space-y-1 text-muted-foreground">
                     <li>• Marketing & Design</li>
@@ -134,7 +134,7 @@ const GetInvolved = () => {
                     <li>• Software Developer</li>
                   </ul>
                 </div>
-                <div className="space-y-2 md:pr-8">
+                <div className="space-y-2 md:pr-16">
                   <h3 className="font-semibold text-lg">What You'll Gain:</h3>
                   <ul className="space-y-1 text-muted-foreground">
                     <li>• Leadership experience</li>
