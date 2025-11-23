@@ -31,7 +31,7 @@ const Home = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-card">
+      <section className="py-20 pb-8 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
@@ -39,14 +39,14 @@ const Home = () => {
               Next Level Dads is a social enterprise dedicated to helping fathers build genuine, lasting connections. We believe that every dad deserves friendship, community, and a sense of belonging.
             </p>
             <p className="text-lg text-muted-foreground">
-              Our mission is to make it easier for fathers to meet and support one another through shared experiences and meaningful conversation — both online and in person. By fostering real relationships, we aim to reduce isolation, strengthen families, and create a community where dads feel seen, valued, and connected.
+              Our mission is to make it easier for dads to meet and support one another through shared experiences and meaningful conversation, both online and in person. By fostering real relationships, we aim to reduce isolation, strengthen families, and build a community where dads feel seen, valued, and connected.
             </p>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-card">
+      <section className="pt-8 pb-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
@@ -95,10 +95,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Be first to try the app
+              Be the first to try the app
             </h2>
             <p className="text-lg text-primary-foreground/90 mb-8">
-              Join our mailing list to stay updated on our launch and be part of building the future of dad connections.
+              Join our early access list to try the app, share feedback, and help shape the future of dad connections.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -107,7 +107,9 @@ const Home = () => {
                 variant="secondary"
                 className="text-lg bg-background text-foreground hover:bg-background/90"
               >
-                <Link to="/features">Learn More</Link>
+                <a href="https://forms.gle/interest-form" target="_blank" rel="noopener noreferrer">
+                  Try It Out
+                </a>
               </Button>
               <Button
                 asChild
