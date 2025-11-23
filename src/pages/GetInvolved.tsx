@@ -120,8 +120,8 @@ const GetInvolved = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <p className="text-muted-foreground text-center leading-relaxed">
-                Join Our Team and Help Shape the Journey
+              <p className="text-muted-foreground text-center leading-relaxed -mt-2">
+                Help Build the Next Level Dads App and Community
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
