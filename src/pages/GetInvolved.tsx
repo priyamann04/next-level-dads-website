@@ -101,16 +101,10 @@ const GetInvolved = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Every hour volunteered, every dollar contributed, and every
-                  partnership formed helps us reach more fathers and strengthen
-                  more families. Your involvement creates ripples of positive
-                  change throughout our community.
+                  Every hour volunteered, every connection formed, every dollar contributed and every event hosted helps us reach more fathers and build a stronger community of support.
                 </p>
                 <p>
-                  Whether you have time, resources, or expertise to share, there's
-                  a meaningful way for you to contribute to our mission. Together,
-                  we're building a future where every father has the support they
-                  need to thrive.
+                  Whether you have time, skills, resources, or ideas to share, there is a meaningful way for you to get involved. Together, we are creating a future where every dad has the connection and encouragement he needs to thrive.
                 </p>
               </div>
             </CardContent>
@@ -127,8 +121,7 @@ const GetInvolved = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <p className="text-muted-foreground text-center leading-relaxed">
-                We're always looking for passionate individuals to join our mission
-                of empowering fathers and strengthening families.
+                Join Our Team and Help Shape the Journey
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
