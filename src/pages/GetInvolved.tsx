@@ -8,7 +8,7 @@ const GetInvolved = () => {
       icon: Heart,
       title: "Volunteer",
       description:
-        "Help us build community for dads—remote or in person. Flexible roles across outreach, design, operations, partnerships, and research. No long-term commitment required.",
+        "Help us build a welcoming community for dads. Volunteer in outreach, design, events, operations, or research, either remotely or in person. Roles are flexible and designed to fit your schedule.",
       action: "Volunteer Application",
       link: "https://forms.google.com/volunteer",
       color: "text-primary",
@@ -18,7 +18,7 @@ const GetInvolved = () => {
       icon: Handshake,
       title: "Partner with Us",
       description:
-        "Are you an organization that supports families? Partner with Next Level Dads to expand your reach and create greater impact together.",
+        "Are you an organization that supports dads or parents? Partner with Next Level Dads to reach more fathers, share resources, and create more opportunities for connection.",
       action: "Partnership Inquiry",
       link: "https://forms.google.com/partner",
       color: "text-primary",
@@ -28,9 +28,19 @@ const GetInvolved = () => {
       icon: DollarSign,
       title: "Support Our Mission",
       description:
-        "Help us reach more dads across Canada. Sponsor a community, fund outreach, or contribute in-kind support (printing, venues, snacks, childcare). Every contribution strengthens families.",
+        "Help us reach more dads across Canada so they can find community and support. You can sponsor outreach, help cover app costs, or contribute in-kind support such as printing, venues, snacks, or childcare.",
       action: "Make a Contribution",
       link: "https://forms.google.com/donate",
+      color: "text-primary",
+      bgColor: "bg-primary/10",
+    },
+    {
+      icon: Handshake,
+      title: "Host an Event",
+      description:
+        "Use the Next Level Dads app to host a group chat, virtual meetup, or local gathering for fathers. We will work with you to set up the event and make it easy for dads to join and connect.",
+      action: "Event Form",
+      link: "https://forms.google.com/event",
       color: "text-primary",
       bgColor: "bg-primary/10",
     },
@@ -43,8 +53,7 @@ const GetInvolved = () => {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Get Involved</h1>
           <p className="text-xl text-muted-foreground">
-            There are many ways to support our mission of empowering fathers and
-            strengthening families. Find the opportunity that's right for you.
+            There are many ways to support our mission of helping fathers feel connected, supported, and seen. Choose the opportunity that is right for you.
           </p>
         </div>
 
