@@ -33,9 +33,9 @@ const Features = () => {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">One-on-one connections</h3>
+              <h3 className="text-xl font-semibold mb-3">Connections</h3>
               <p className="text-muted-foreground">
-                Match with dads by fatherhood stage and interests — from newborn to teens and beyond.
+                Match with dads based on shared experiences and interests.
               </p>
             </CardContent>
           </Card>
@@ -45,9 +45,9 @@ const Features = () => {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <MessageSquare className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Communities & group chats</h3>
+              <h3 className="text-xl font-semibold mb-3">Communities</h3>
               <p className="text-muted-foreground">
-                Join communities in your city and around shared interests, then hop into group chats to plan meetups.
+                Join communities across Canada based on your interests. Connect with other dads in each group and get updates when that community hosts new events or meetups.
               </p>
             </CardContent>
           </Card>
@@ -57,9 +57,9 @@ const Features = () => {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Calendar className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Events (with easy checkout)</h3>
+              <h3 className="text-xl font-semibold mb-3">Events</h3>
               <p className="text-muted-foreground">
-                Discover local dad-led or partner-hosted events and pay securely in-app. Instant confirmation.
+                Discover dad led and partner hosted events in your communities. Browse upcoming meetups and sign up.
               </p>
             </CardContent>
           </Card>
