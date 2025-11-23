@@ -119,11 +119,11 @@ const GetInvolved = () => {
                 Join Our Team
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6 px-6 md:px-12">
+            <CardContent className="space-y-6 px-8 md:px-16">
               <p className="text-muted-foreground text-center leading-relaxed -mt-4">
                 Help Build the Next Level Dads App and Community
               </p>
-              <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-3xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-16">
                 <div className="space-y-2">
                   <h3 className="font-semibold text-lg">Roles Available:</h3>
                   <ul className="space-y-1 text-muted-foreground">
