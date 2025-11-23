@@ -82,7 +82,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Response Time</h3>
                       <p className="text-sm text-muted-foreground">
-                        We typically respond within 24-48 hours
+                        We usually respond within 1–2 business days
                       </p>
                     </div>
                   </div>
