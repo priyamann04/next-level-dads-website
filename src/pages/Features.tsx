@@ -76,7 +76,7 @@ const Features = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Create your profile</h3>
                 <p className="text-muted-foreground">
-                  Choose your city & province, fatherhood stage, interests, and a short bio.
+                  Choose your city & province, child age range, interests, etc.
                 </p>
               </div>
 
@@ -96,7 +96,7 @@ const Features = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Join communities & events</h3>
                 <p className="text-muted-foreground">
-                  Browse groups, jump into chats, and register for events with simple, secure checkout.
+                  Explore communities based on your interests and join or host dad-led events and meetups.
                 </p>
               </div>
             </div>
