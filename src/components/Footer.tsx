@@ -43,11 +43,11 @@ const Footer = () => {
 
           {/* Email */}
           <a
-            href="mailto:hello@nextleveldads.ca"
+            href="mailto:info@nextleveldads.ca"
             className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             <Mail className="h-4 w-4" />
-            <span>hello@nextleveldads.ca</span>
+            <span>info@nextleveldads.ca</span>
           </a>
 
           {/* Copyright */}
