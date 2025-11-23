@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Handshake, DollarSign } from "lucide-react";
+import { Heart, Handshake, DollarSign, Calendar } from "lucide-react";
 
 const GetInvolved = () => {
   const opportunities = [
@@ -35,7 +35,7 @@ const GetInvolved = () => {
       bgColor: "bg-primary/10",
     },
     {
-      icon: Handshake,
+      icon: Calendar,
       title: "Host an Event",
       description:
         "Use the Next Level Dads app to host a group chat, virtual meetup, or local gathering for fathers. We will work with you to set up the event and make it easy for dads to join and connect.",
