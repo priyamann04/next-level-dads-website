@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Target, Home } from "lucide-react";
+import { Users, Target, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import fatherSonImage from "@/assets/father-son.jpg";
 
@@ -20,15 +20,15 @@ const About = () => {
         <section className="max-w-4xl mx-auto mb-16">
           <Card className="border-2">
             <CardContent className="pt-8">
-              <div className="grid md:grid-cols-2 gap-8 items-start">
-                <div>
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div className="w-full lg:w-2/5 flex-shrink-0 mx-auto lg:mx-0">
                   <img 
                     src={fatherSonImage} 
                     alt="Priya, founder of Next Level Dads"
-                    className="rounded-lg shadow-lg w-full h-auto"
+                    className="rounded-lg shadow-lg w-full h-auto max-w-md mx-auto lg:max-w-none"
                   />
                 </div>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className="flex-1 space-y-4 text-muted-foreground leading-relaxed text-base">
                   <p>
                     Hi, I'm Priya, the founder of Next Level Dads. I was raised by a single father who has been an incredible role model, doing everything he could to support me and my brother. Through many conversations with him, I began to understand the quiet challenges fathers face, especially when it comes to building connections, finding support, and navigating fatherhood without a strong community.
                   </p>
@@ -38,10 +38,12 @@ const About = () => {
                   <p>
                     That is what inspired Next Level Dads.
                   </p>
-                  <p>
-                    We are building an app designed to help fathers connect one-on-one, share experiences, and build meaningful friendships. By making it easier for dads to meet, talk, and support each other, we hope to help dads feel valued, empowered, and part of a genuine community.
-                  </p>
                 </div>
+              </div>
+              <div className="mt-8 text-muted-foreground leading-relaxed text-base">
+                <p>
+                  We are building an app designed to help fathers connect one-on-one, share experiences, and build meaningful friendships. By making it easier for dads to meet, talk, and support each other, we hope to help dads feel valued, empowered, and part of a genuine community.
+                </p>
               </div>
             </CardContent>
           </Card>
@@ -54,7 +56,7 @@ const About = () => {
             <Card className="text-center border-2 hover:border-primary transition-all">
               <CardContent className="pt-8">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-8 w-8 text-primary" />
+                  <Users className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Connection Matters</h3>
                 <p className="text-muted-foreground">
@@ -93,17 +95,19 @@ const About = () => {
         <section className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-6">Join Our Mission</h2>
           <Card className="border-2">
-            <CardContent className="pt-8">
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-6">
+            <CardContent className="pt-10 pb-10">
+              <div className="text-center space-y-6">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   Next Level Dads is built on the belief that fatherhood should not be experienced alone. We are creating a place where dads can feel seen, connect with others, and build meaningful relationships.
                 </p>
-                <p className="text-muted-foreground mb-8">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   We are looking for people who believe in the power of connection, whether you are a father, supporter, community leader, or someone passionate about helping dads feel valued and understood. If you would like to get involved, test the app, or collaborate, we would love to hear from you.
                 </p>
-                <Button asChild size="lg">
-                  <Link to="/get-involved">Learn More</Link>
-                </Button>
+                <div className="pt-2">
+                  <Button asChild size="lg" className="text-base px-8 py-6">
+                    <Link to="/get-involved">Learn More</Link>
+                  </Button>
+                </div>
               </div>
             </CardContent>
           </Card>
