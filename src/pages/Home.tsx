@@ -2,15 +2,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Heart, MessageCircle } from "lucide-react";
-
 const Home = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-background via-accent/20 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 text-primary">
               Next Level Dads
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
@@ -68,9 +66,7 @@ const Home = () => {
                     <MessageCircle className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">Community</h3>
-                  <p className="text-muted-foreground">
-                    Join local and interest-based groups where you can share the journey of fatherhood with others who understand.
-                  </p>
+                  <p className="text-muted-foreground">Meet other fathers locally through groups built around shared interests</p>
                 </CardContent>
               </Card>
 
@@ -101,22 +97,12 @@ const Home = () => {
               Join our early access list to try the app, share feedback, and help shape the future of dad connections.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                variant="secondary"
-                className="text-lg bg-background text-foreground hover:bg-background/90"
-              >
+              <Button asChild size="lg" variant="secondary" className="text-lg bg-background text-foreground hover:bg-background/90">
                 <a href="https://forms.gle/interest-form" target="_blank" rel="noopener noreferrer">
                   Try It Out
                 </a>
               </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-              >
+              <Button asChild size="lg" variant="outline" className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                 <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
                   Join the Mailing List
                 </a>
@@ -149,8 +135,6 @@ const Home = () => {
         </div>
       </section>
 
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
