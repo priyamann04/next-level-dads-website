@@ -19,9 +19,7 @@ const Home = () => {
                 <Link to="/features#explore-demo">Explore the Demo</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-lg">
-                <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
-                  Learn More
-                </a>
+                <Link to="/features">Learn More</Link>
               </Button>
             </div>
           </div>
