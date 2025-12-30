@@ -4,10 +4,6 @@ import {
   MessageSquare, 
   Users, 
   Calendar,
-  Shield,
-  Lock,
-  CreditCard,
-  AlertCircle,
   MapPin,
   QrCode
 } from "lucide-react";
@@ -160,77 +156,6 @@ const Features = () => {
                   </p>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Safety & Privacy Section */}
-        <section className="mb-20 bg-card -mx-4 px-4 py-20">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Built for trust</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Shield className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Report & block tools</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Easy-to-use safety features to protect your experience
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <AlertCircle className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Community guidelines</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Clear standards that keep our community respectful
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CreditCard className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Secure payments (Stripe)</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Bank-level encryption for all event payments
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Lock className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">We don't sell your data</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Your privacy is protected — always
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="text-center mt-8">
-              <div className="flex gap-4 justify-center text-sm">
-                <a href="#" className="text-primary hover:underline">Privacy Policy</a>
-                <span className="text-muted-foreground">•</span>
-                <a href="#" className="text-primary hover:underline">Terms</a>
-              </div>
             </div>
           </div>
         </section>
