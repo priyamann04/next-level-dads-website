@@ -214,7 +214,7 @@ const Features = () => {
                   <h3 className="text-xl font-semibold mb-3">Interest Form</h3>
                   <p className="text-muted-foreground text-sm mb-6 flex-grow">Interested in beta testing or future updates? Let us know which features excite you most.</p>
                   <Button asChild variant="outline" className="w-full">
-                    <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer" className="bg-primary">Share Your Interest</a>
+                    <a href="https://forms.gle/tZJCe1926HCCtpjKA" target="_blank" rel="noopener noreferrer" className="bg-primary">Share Your Interest</a>
                   </Button>
                 </CardContent>
               </Card>
