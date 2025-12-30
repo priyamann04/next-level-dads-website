@@ -194,7 +194,7 @@ Frequently Asked Questions</h2>
             </div>
 
             {/* Cards Grid */}
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               {/* View Demo Card */}
               <Card className="bg-background/95 backdrop-blur h-full">
                 <CardContent className="pt-6 h-full flex flex-col">
@@ -205,6 +205,21 @@ Frequently Asked Questions</h2>
                   <Button asChild className="w-full">
                     <a href="https://drive.google.com/file/d/1YG2DGozy8nuG6PCLilz1zS9WwfcTYrqX/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                       Watch Demo
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Try it Yourself Card */}
+              <Card className="bg-background/95 backdrop-blur h-full">
+                <CardContent className="pt-6 h-full flex flex-col">
+                  <h3 className="text-xl font-semibold mb-3">Try it Yourself</h3>
+                  <p className="text-muted-foreground text-sm mb-6 flex-grow">
+                    Explore a limited preview of the experience at your own pace.
+                  </p>
+                  <Button asChild className="w-full">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      View Preview
                     </a>
                   </Button>
                 </CardContent>
