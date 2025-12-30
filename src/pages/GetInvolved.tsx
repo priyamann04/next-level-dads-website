@@ -123,7 +123,7 @@ Design</li>
               </div>
               <div className="pt-4 text-center">
                 <Button asChild size="lg" className="w-full md:w-auto">
-                  <a href="https://forms.google.com/student-team" target="_blank" rel="noopener noreferrer">
+                  <a href="https://forms.gle/dAB75W2hFw8RUKwy6" target="_blank" rel="noopener noreferrer">
                     Apply to Join Our Team
                   </a>
                 </Button>
