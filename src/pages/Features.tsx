@@ -181,7 +181,7 @@ const Features = () => {
         </section>
 
         {/* Explore the Demo Section */}
-        <section className="max-w-5xl mx-auto">
+        <section id="explore-demo" className="max-w-5xl mx-auto scroll-mt-24">
           <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 md:p-12">
             {/* Header */}
             <div className="text-center mb-10">
