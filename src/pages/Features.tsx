@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Users, Calendar, MapPin } from "lucide-react";
 const Features = () => {
-  return <div className="min-h-screen py-20">
+  return <div className="min-h-screen py-20 pb-8">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center mb-16">
