@@ -102,11 +102,9 @@ const GetInvolved = () => {
                 <div className="space-y-2 md:pl-24">
                   <h3 className="font-semibold text-lg">Roles Available:</h3>
                   <ul className="space-y-1 text-muted-foreground">
-                    <li>• Marketing 
-Design</li>
-                    
-                    <li>• Outreach & Community Engagement</li>
-                    
+                    <li>• Marketing</li>
+                    <li>• Design</li>
+                    <li>• Outreach</li>
                     <li>• Software Development</li>
                   </ul>
                 </div>
