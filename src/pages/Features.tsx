@@ -211,14 +211,10 @@ const Features = () => {
               {/* Mailing List Card */}
               <Card className="bg-background/95 backdrop-blur h-full">
                 <CardContent className="pt-6 h-full flex flex-col">
-                  <h3 className="text-xl font-semibold mb-3">Join the Mailing List</h3>
-                  <p className="text-muted-foreground text-sm mb-6 flex-grow">
-                    Interested in beta testing or future updates? Let us know which features excite you most.
-                  </p>
+                  <h3 className="text-xl font-semibold mb-3">Interest Form</h3>
+                  <p className="text-muted-foreground text-sm mb-6 flex-grow">Interested in beta testing or future updates? Let us know which features excite you most.</p>
                   <Button asChild variant="outline" className="w-full">
-                    <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
-                      Sign Up
-                    </a>
+                    <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer" className="bg-primary">Share Your Interest</a>
                   </Button>
                 </CardContent>
               </Card>
@@ -231,7 +227,7 @@ const Features = () => {
                     Share your thoughts by filling out our feedback form.
                   </p>
                   <Button asChild variant="outline" className="w-full">
-                    <a href="https://forms.gle/feedback" target="_blank" rel="noopener noreferrer">
+                    <a href="https://forms.gle/feedback" target="_blank" rel="noopener noreferrer" className="bg-primary">
                       Give Feedback
                     </a>
                   </Button>
@@ -240,7 +236,7 @@ const Features = () => {
             </div>
 
             {/* Raffle Banner */}
-            <div className="bg-primary-foreground/10 backdrop-blur rounded-xl p-6 text-center">
+            <div className="backdrop-blur rounded-xl p-6 text-center bg-destructive-foreground">
               <p className="text-primary-foreground/80 text-sm">
                 As a thank-you for participating, everyone who completes the feedback form will be entered into a raffle to win a <span className="font-medium">$25 Amazon gift card</span>. The winner will be selected randomly and contacted by email.
               </p>
