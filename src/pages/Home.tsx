@@ -92,7 +92,7 @@ const Home = () => {
             <p className="text-lg text-primary-foreground/90 mb-8">Get an early look at the Next Level Dads experience, share your thoughts, and help shape what we build next.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-lg bg-background text-foreground hover:bg-background/90">
-                <a href="https://forms.gle/interest-form" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1YG2DGozy8nuG6PCLilz1zS9WwfcTYrqX/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   Explore the Demo
                 </a>
               </Button>
