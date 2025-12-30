@@ -89,7 +89,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Be the First to Explore the Demo</h2>
-            <p className="text-lg text-primary-foreground/90 mb-8">Get an early look at the Next Level Dads experience and help shape what we build next.</p>
+            <p className="text-lg text-primary-foreground/90 mb-8">This demo offers an early look at the experience. You can watch a walkthrough, explore a clickable preview of the app, sign up for updates through the interest form, or share your thoughts using the feedback form to help guide what we build next. As a thank you, anyone who completes the feedback form will be entered into a draw to win a $25 Amazon gift card.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-lg bg-background text-foreground hover:bg-background/90">
                 <a href="https://drive.google.com/file/d/1YG2DGozy8nuG6PCLilz1zS9WwfcTYrqX/view?usp=sharing" target="_blank" rel="noopener noreferrer">Watch Demo</a>
