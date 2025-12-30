@@ -5,7 +5,7 @@ const GetInvolved = () => {
   const opportunities = [{
     icon: Heart,
     title: "Volunteer",
-    description: "Help us build a welcoming community for dads. Volunteer in outreach, design, marketing or software development. Roles are flexible and designed to fit your schedule.",
+    description: "Help us reach more dads across Canada so they can find community and support. You can sponsor outreach, help cover app costs, or provide non-monetary support (e.g. printing or venues).",
     action: "Volunteer Application",
     link: "https://forms.gle/5Eh7Zfdt6J69ri4u6",
     color: "text-primary",
