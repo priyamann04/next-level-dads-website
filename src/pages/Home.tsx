@@ -94,6 +94,9 @@ const Home = () => {
               <Button asChild size="lg" variant="secondary" className="text-lg bg-background text-foreground hover:bg-background/90">
                 <a href="https://drive.google.com/file/d/1YG2DGozy8nuG6PCLilz1zS9WwfcTYrqX/view?usp=sharing" target="_blank" rel="noopener noreferrer">Watch Demo</a>
               </Button>
+              <Button asChild size="lg" variant="secondary" className="text-lg bg-background text-foreground hover:bg-background/90">
+                <Link to="/features#explore-demo">Try it Yourself</Link>
+              </Button>
               <Button asChild size="lg" variant="outline" className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                 <a href="https://forms.gle/sK8RQfJwJUo2QDGg9" target="_blank" rel="noopener noreferrer">Interest Form</a>
               </Button>
