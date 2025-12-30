@@ -59,7 +59,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © 2025 Next Level Dads
+            © 2025 Next Level Dads Ltd.
           </p>
         </div>
       </div>
