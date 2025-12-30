@@ -15,7 +15,7 @@ const GetInvolved = () => {
     title: "Partner with Us",
     description: "Are you an organization that supports dads or parents? Partner with Next Level Dads to reach more fathers, share resources, and create more opportunities for connection.",
     action: "Partnership Inquiry",
-    link: "https://forms.google.com/partner",
+    link: "https://forms.gle/4EZQcPBsGSzGSnTr6",
     color: "text-primary",
     bgColor: "bg-primary/10"
   }, {
