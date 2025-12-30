@@ -1,53 +1,41 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Handshake, DollarSign, Calendar } from "lucide-react";
-
 const GetInvolved = () => {
-  const opportunities = [
-    {
-      icon: Heart,
-      title: "Volunteer",
-      description:
-        "Help us build a welcoming community for dads. Volunteer in outreach, design, events, operations, or research, either remotely or in person. Roles are flexible and designed to fit your schedule.",
-      action: "Volunteer Application",
-      link: "https://forms.google.com/volunteer",
-      color: "text-primary",
-      bgColor: "bg-primary/10",
-    },
-    {
-      icon: Handshake,
-      title: "Partner with Us",
-      description:
-        "Are you an organization that supports dads or parents? Partner with Next Level Dads to reach more fathers, share resources, and create more opportunities for connection.",
-      action: "Partnership Inquiry",
-      link: "https://forms.google.com/partner",
-      color: "text-primary",
-      bgColor: "bg-primary/10",
-    },
-    {
-      icon: DollarSign,
-      title: "Support Our Mission",
-      description:
-        "Help us reach more dads across Canada so they can find community and support. You can sponsor outreach, help cover app costs, or contribute in-kind support such as printing, venues, snacks, or childcare.",
-      action: "Make a Contribution",
-      link: "https://forms.google.com/donate",
-      color: "text-primary",
-      bgColor: "bg-primary/10",
-    },
-    {
-      icon: Calendar,
-      title: "Host an Event",
-      description:
-        "Use the Next Level Dads app to host a group chat, virtual meetup, or local gathering for fathers. We will work with you to set up the event and make it easy for dads to join and connect.",
-      action: "Event Form",
-      link: "https://forms.google.com/event",
-      color: "text-primary",
-      bgColor: "bg-primary/10",
-    },
-  ];
-
-  return (
-    <div className="min-h-screen py-20">
+  const opportunities = [{
+    icon: Heart,
+    title: "Volunteer",
+    description: "Help us build a welcoming community for dads. Volunteer in outreach, design, events, operations, or research, either remotely or in person. Roles are flexible and designed to fit your schedule.",
+    action: "Volunteer Application",
+    link: "https://forms.google.com/volunteer",
+    color: "text-primary",
+    bgColor: "bg-primary/10"
+  }, {
+    icon: Handshake,
+    title: "Partner with Us",
+    description: "Are you an organization that supports dads or parents? Partner with Next Level Dads to reach more fathers, share resources, and create more opportunities for connection.",
+    action: "Partnership Inquiry",
+    link: "https://forms.google.com/partner",
+    color: "text-primary",
+    bgColor: "bg-primary/10"
+  }, {
+    icon: DollarSign,
+    title: "Support Our Mission",
+    description: "Help us reach more dads across Canada so they can find community and support. You can sponsor outreach, help cover app costs, or contribute in-kind support such as printing, venues, snacks, or childcare.",
+    action: "Make a Contribution",
+    link: "https://forms.google.com/donate",
+    color: "text-primary",
+    bgColor: "bg-primary/10"
+  }, {
+    icon: Calendar,
+    title: "Host an Event",
+    description: "Use the Next Level Dads app to host a group chat, virtual meetup, or local gathering for fathers. We will work with you to set up the event and make it easy for dads to join and connect.",
+    action: "Event Form",
+    link: "https://forms.google.com/event",
+    color: "text-primary",
+    bgColor: "bg-primary/10"
+  }];
+  return <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center mb-16">
@@ -59,11 +47,7 @@ const GetInvolved = () => {
 
         {/* Opportunities Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
-          {opportunities.map((opportunity, index) => (
-            <Card
-              key={index}
-              className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg"
-            >
+          {opportunities.map((opportunity, index) => <Card key={index} className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <div className={`w-12 h-12 rounded-full ${opportunity.bgColor} flex items-center justify-center mb-4`}>
                   <opportunity.icon className={`h-6 w-6 ${opportunity.color}`} />
@@ -74,22 +58,13 @@ const GetInvolved = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {opportunity.description}
                 </p>
-                <Button
-                  asChild
-                  variant="default"
-                  className="w-full"
-                >
-                  <a
-                    href={opportunity.link}
-                    target={opportunity.link.startsWith("http") ? "_blank" : undefined}
-                    rel={opportunity.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                  >
+                <Button asChild variant="default" className="w-full">
+                  <a href={opportunity.link} target={opportunity.link.startsWith("http") ? "_blank" : undefined} rel={opportunity.link.startsWith("http") ? "noopener noreferrer" : undefined}>
                     {opportunity.action}
                   </a>
                 </Button>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Community Impact */}
@@ -127,11 +102,12 @@ const GetInvolved = () => {
                 <div className="space-y-2 md:pl-24">
                   <h3 className="font-semibold text-lg">Roles Available:</h3>
                   <ul className="space-y-1 text-muted-foreground">
-                    <li>• Marketing & Design</li>
-                    <li>• Operations & Events</li>
+                    <li>• Marketing 
+Design</li>
+                    
                     <li>• Outreach & Community Engagement</li>
-                    <li>• Research & Program Development</li>
-                    <li>• Software Developer</li>
+                    
+                    <li>• Software Development</li>
                   </ul>
                 </div>
                 <div className="space-y-2 md:pr-16">
@@ -139,7 +115,7 @@ const GetInvolved = () => {
                   <ul className="space-y-1 text-muted-foreground">
                     <li>• Leadership experience</li>
                     <li>• Social entrepreneurship skills</li>
-                    <li>• Professional network</li>
+                    
                     <li>• Portfolio projects</li>
                     <li>• Making real impact</li>
                   </ul>
@@ -147,11 +123,7 @@ const GetInvolved = () => {
               </div>
               <div className="pt-4 text-center">
                 <Button asChild size="lg" className="w-full md:w-auto">
-                  <a
-                    href="https://forms.google.com/student-team"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href="https://forms.google.com/student-team" target="_blank" rel="noopener noreferrer">
                     Apply to Join Our Team
                   </a>
                 </Button>
@@ -160,8 +132,6 @@ const GetInvolved = () => {
           </Card>
         </section>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default GetInvolved;
