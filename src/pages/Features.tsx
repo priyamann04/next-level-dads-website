@@ -189,7 +189,7 @@ const Features = () => {
                   Explore the Demo
                 </h2>
                 <p className="text-lg text-primary-foreground/90 mb-6">
-                  Get a preview of what the Next Level Dads app could look like. Explore the demo experience, then fill out the interest form if you would like to test the real app or share feedback.
+                  Get a preview of what the Next Level Dads app could look like. Watch the demo, explore the experience, and help shape what we build next.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Button asChild size="lg" variant="secondary" className="text-lg bg-background text-foreground hover:bg-background/90">
