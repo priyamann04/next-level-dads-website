@@ -1,17 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  MessageSquare, 
-  Users, 
-  Calendar,
-  MapPin,
-  QrCode
-} from "lucide-react";
-
+import { MessageSquare, Users, Calendar, MapPin, QrCode } from "lucide-react";
 const Features = () => {
-
-  return (
-    <div className="min-h-screen py-20">
+  return <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center mb-16">
@@ -168,27 +159,21 @@ const Features = () => {
               <Card>
                 <CardContent className="pt-6">
                   <h3 className="text-lg font-semibold mb-2">Is this a mobile app?</h3>
-                  <p className="text-muted-foreground">
-                    Not yet. Right now, Next Level Dads is a web-based platform you can use on your phone or computer. A mobile app version is planned for the future.
-                  </p>
+                  <p className="text-muted-foreground">Not yet. Next Level Dads is currently in early preview, with a web-based platform you can explore on your phone or computer. A full launch in Canada, including a mobile app version, is planned for the future.</p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardContent className="pt-6">
                   <h3 className="text-lg font-semibold mb-2">How much does it cost?</h3>
-                  <p className="text-muted-foreground">
-                    Creating a profile and connecting is free. Some events may have a fee set by hosts.
-                  </p>
+                  <p className="text-muted-foreground">Creating a profile and connecting will be free at launch. Some events may have a fee set by hosts.</p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardContent className="pt-6">
                   <h3 className="text-lg font-semibold mb-2">What is Next Level Dads?</h3>
-                  <p className="text-muted-foreground">
-                    Next Level Dads is a Canadian-based social enterprise focused on helping fathers connect, build friendships, and find community.
-                  </p>
+                  <p className="text-muted-foreground">Next Level Dads is a Canadian-based social enterprise focused on helping fathers connect, build friendships, and find community. The platform is currently in early preview, with a demo available as we prepare for a broader launch in Canada.</p>
                 </CardContent>
               </Card>
             </div>
@@ -207,22 +192,12 @@ const Features = () => {
                   Get a preview of what the Next Level Dads app could look like. Explore the demo experience, then fill out the interest form if you would like to test the real app or share feedback.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="secondary"
-                    className="text-lg bg-background text-foreground hover:bg-background/90"
-                  >
+                  <Button asChild size="lg" variant="secondary" className="text-lg bg-background text-foreground hover:bg-background/90">
                     <a href="https://forms.gle/demo" target="_blank" rel="noopener noreferrer">
                       View Demo
                     </a>
                   </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-                  >
+                  <Button asChild size="lg" variant="outline" className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                     <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
                       Join the Mailing List
                     </a>
@@ -245,8 +220,6 @@ const Features = () => {
           </div>
         </section>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Features;
