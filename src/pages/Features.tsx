@@ -150,7 +150,7 @@ const Features = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="mb-20 bg-accent">
+        <section className="mb-20 bg-accent -mx-4 px-4 py-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
 
