@@ -218,7 +218,7 @@ Frequently Asked Questions</h2>
                     Explore a limited preview of the experience at your own pace.
                   </p>
                   <Button asChild className="w-full">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://next-level-dads-app.vercel.app/" target="_blank" rel="noopener noreferrer">
                       View Preview
                     </a>
                   </Button>
