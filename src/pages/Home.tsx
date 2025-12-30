@@ -108,29 +108,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Building Community Together</h2>
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-2">100+</div>
-                <p className="text-lg text-muted-foreground">Dads Connected</p>
-              </div>
-              <div>
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-2">50+</div>
-                <p className="text-lg text-muted-foreground">Events Hosted</p>
-              </div>
-              <div>
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-2">24/7</div>
-                <p className="text-lg text-muted-foreground">Community Support</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
     </div>;
 };
 export default Home;
