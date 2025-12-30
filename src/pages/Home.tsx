@@ -88,12 +88,8 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Be the first to try the app
-            </h2>
-            <p className="text-lg text-primary-foreground/90 mb-8">
-              Join our early access list to try the app, share feedback, and help shape the future of dad connections.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Be the First to Explore the Demo</h2>
+            <p className="text-lg text-primary-foreground/90 mb-8">Get an early look at the Next Level Dads experience, share your thoughts, and help shape what we build next.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="text-lg bg-background text-foreground hover:bg-background/90">
                 <a href="https://forms.gle/interest-form" target="_blank" rel="noopener noreferrer">
@@ -101,9 +97,7 @@ const Home = () => {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
-                  Join the Mailing List
-                </a>
+                <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">Interest Form</a>
               </Button>
             </div>
           </div>
