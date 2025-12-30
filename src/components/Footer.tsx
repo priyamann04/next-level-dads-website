@@ -5,10 +5,10 @@ import logo from "@/assets/logo-transparent.png";
 const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
-      <div className="container mx-auto px-4 py-12">
-        <div className="flex flex-col items-center text-center space-y-6">
+      <div className="container mx-auto px-4 py-6">
+        <div className="flex flex-col items-center text-center space-y-3">
           {/* Logo */}
-          <img src={logo} alt="Next Level Dads" className="h-20 w-auto" />
+          <img src={logo} alt="Next Level Dads" className="h-14 w-auto" />
           
           {/* Links */}
           <div className="flex flex-wrap justify-center gap-2 text-sm">
