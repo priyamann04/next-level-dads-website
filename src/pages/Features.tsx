@@ -180,42 +180,81 @@ const Features = () => {
           </div>
         </section>
 
-        {/* CTA with QR Code */}
+        {/* Explore the Demo Section */}
         <section className="max-w-5xl mx-auto">
           <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="text-center md:text-left">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-                  Explore the Demo
-                </h2>
-                <p className="text-lg text-primary-foreground/90 mb-6">
-                  Get a preview of what the Next Level Dads app could look like. Watch the demo, explore the experience, and help shape what we build next.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                  <Button asChild size="lg" variant="secondary" className="text-lg bg-background text-foreground hover:bg-background/90">
-                    <a href="https://forms.gle/demo" target="_blank" rel="noopener noreferrer">
-                      View Demo
-                    </a>
-                  </Button>
-                  <Button asChild size="lg" variant="outline" className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                    <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
-                      Join the Mailing List
-                    </a>
-                  </Button>
-                </div>
-              </div>
+            {/* Header */}
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+                Explore the Demo
+              </h2>
+              <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
+                Get a preview of what the Next Level Dads app could look like. Watch the demo, explore the experience, and help shape what we build next.
+              </p>
+            </div>
 
-              {/* QR Code */}
-              <div className="flex justify-center md:justify-end">
-                <Card className="p-6 text-center bg-background">
-                  <CardContent className="p-0">
-                    <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center mb-4 mx-auto">
-                      <QrCode className="w-32 h-32 text-muted-foreground" />
-                    </div>
-                    <p className="text-sm font-semibold text-foreground mb-2">Scan to view the Interest Form</p>
-                  </CardContent>
-                </Card>
-              </div>
+            {/* Cards Grid */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {/* View Demo Card */}
+              <Card className="bg-background/95 backdrop-blur">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <QrCode className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">View Demo</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Watch a short walkthrough of the demo experience.
+                  </p>
+                  <Button asChild className="w-full">
+                    <a href="https://forms.gle/demo" target="_blank" rel="noopener noreferrer">
+                      Watch Demo
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Mailing List Card */}
+              <Card className="bg-background/95 backdrop-blur">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <MessageSquare className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Join the Mailing List</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Interested in beta testing or future updates? Let us know which features excite you most.
+                  </p>
+                  <Button asChild variant="outline" className="w-full">
+                    <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
+                      Sign Up
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Feedback Card */}
+              <Card className="bg-background/95 backdrop-blur">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Calendar className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Tried the Demo?</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Share your thoughts by filling out our feedback form.
+                  </p>
+                  <Button asChild variant="outline" className="w-full">
+                    <a href="https://forms.gle/feedback" target="_blank" rel="noopener noreferrer">
+                      Give Feedback
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Raffle Banner */}
+            <div className="bg-background/20 backdrop-blur rounded-xl p-6 text-center border border-primary-foreground/20">
+              <p className="text-primary-foreground font-medium">
+                🎁 As a thank-you for participating, everyone who completes the feedback form will be entered into a raffle to win a <span className="font-bold">$25 Amazon gift card</span>. The winner will be selected randomly and contacted by email.
+              </p>
             </div>
           </div>
         </section>
