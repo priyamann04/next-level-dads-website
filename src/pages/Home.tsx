@@ -100,6 +100,9 @@ const Home = () => {
               <Button asChild size="lg" variant="outline" className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                 <a href="https://forms.gle/sK8RQfJwJUo2QDGg9" target="_blank" rel="noopener noreferrer">Interest Form</a>
               </Button>
+              <Button asChild size="lg" variant="outline" className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                <a href="https://forms.gle/kFXuhWFceWyf3vjw6" target="_blank" rel="noopener noreferrer">Feedback Form</a>
+              </Button>
             </div>
           </div>
         </div>
