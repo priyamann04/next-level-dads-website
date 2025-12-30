@@ -46,9 +46,7 @@ const Features = () => {
                 <Calendar className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Events</h3>
-              <p className="text-muted-foreground">
-                Discover dad led and partner hosted events in your communities. Browse upcoming meetups and sign up.
-              </p>
+              <p className="text-muted-foreground">Discover dad-led and partner-hosted events in your community, or request one by filling out our event form to have it posted on the Next Level Dads platform.</p>
             </CardContent>
           </Card>
         </div>
