@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, Users, Calendar, MapPin, QrCode } from "lucide-react";
+import { MessageSquare, Users, Calendar, MapPin } from "lucide-react";
 const Features = () => {
   return <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
@@ -194,13 +194,10 @@ const Features = () => {
             {/* Cards Grid */}
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {/* View Demo Card */}
-              <Card className="bg-background/95 backdrop-blur">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <QrCode className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">View Demo</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
+              <Card className="bg-background/95 backdrop-blur h-full">
+                <CardContent className="pt-6 h-full flex flex-col">
+                  <h3 className="text-xl font-semibold mb-3">View Demo</h3>
+                  <p className="text-muted-foreground text-sm mb-6 flex-grow">
                     Watch a short walkthrough of the demo experience.
                   </p>
                   <Button asChild className="w-full">
@@ -212,13 +209,10 @@ const Features = () => {
               </Card>
 
               {/* Mailing List Card */}
-              <Card className="bg-background/95 backdrop-blur">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <MessageSquare className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Join the Mailing List</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
+              <Card className="bg-background/95 backdrop-blur h-full">
+                <CardContent className="pt-6 h-full flex flex-col">
+                  <h3 className="text-xl font-semibold mb-3">Join the Mailing List</h3>
+                  <p className="text-muted-foreground text-sm mb-6 flex-grow">
                     Interested in beta testing or future updates? Let us know which features excite you most.
                   </p>
                   <Button asChild variant="outline" className="w-full">
@@ -230,13 +224,10 @@ const Features = () => {
               </Card>
 
               {/* Feedback Card */}
-              <Card className="bg-background/95 backdrop-blur">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Calendar className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Tried the Demo?</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
+              <Card className="bg-background/95 backdrop-blur h-full">
+                <CardContent className="pt-6 h-full flex flex-col">
+                  <h3 className="text-xl font-semibold mb-3">Tried the Demo?</h3>
+                  <p className="text-muted-foreground text-sm mb-6 flex-grow">
                     Share your thoughts by filling out our feedback form.
                   </p>
                   <Button asChild variant="outline" className="w-full">
@@ -249,9 +240,9 @@ const Features = () => {
             </div>
 
             {/* Raffle Banner */}
-            <div className="bg-background/20 backdrop-blur rounded-xl p-6 text-center border border-primary-foreground/20">
-              <p className="text-primary-foreground font-medium">
-                🎁 As a thank-you for participating, everyone who completes the feedback form will be entered into a raffle to win a <span className="font-bold">$25 Amazon gift card</span>. The winner will be selected randomly and contacted by email.
+            <div className="bg-primary-foreground/10 backdrop-blur rounded-xl p-6 text-center">
+              <p className="text-primary-foreground/80 text-sm">
+                As a thank-you for participating, everyone who completes the feedback form will be entered into a raffle to win a <span className="font-medium">$25 Amazon gift card</span>. The winner will be selected randomly and contacted by email.
               </p>
             </div>
           </div>
