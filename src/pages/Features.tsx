@@ -201,7 +201,7 @@ const Features = () => {
                     Watch a short walkthrough of the demo experience.
                   </p>
                   <Button asChild className="w-full">
-                    <a href="https://forms.gle/demo" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1YG2DGozy8nuG6PCLilz1zS9WwfcTYrqX/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                       Watch Demo
                     </a>
                   </Button>
