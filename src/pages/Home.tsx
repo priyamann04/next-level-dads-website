@@ -16,12 +16,12 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
               <Button asChild size="lg" className="text-lg">
-                <Link to="/features">Learn More</Link>
+                <Link to="/features">Explore the Demo</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-lg">
-                <Link to="/features#explore-demo">
-                  Explore the Demo
-                </Link>
+                <a href="https://forms.gle/mailing-list" target="_blank" rel="noopener noreferrer">
+                  Learn More
+                </a>
               </Button>
             </div>
           </div>
