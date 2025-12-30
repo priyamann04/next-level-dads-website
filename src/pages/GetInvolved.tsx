@@ -23,7 +23,7 @@ const GetInvolved = () => {
     title: "Support Our Mission",
     description: "Help us reach more dads across Canada so they can find community and support. You can sponsor outreach, help cover app costs, or contribute in-kind support such as printing, venues, snacks, or childcare.",
     action: "Make a Contribution",
-    link: "https://forms.google.com/donate",
+    link: "https://forms.gle/ihjQ1n8C3dEfGiwM6",
     color: "text-primary",
     bgColor: "bg-primary/10"
   }, {
