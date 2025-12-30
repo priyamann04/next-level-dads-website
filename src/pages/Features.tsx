@@ -52,7 +52,7 @@ const Features = () => {
         </div>
 
         {/* How It Works Section */}
-        <section className="mb-20 bg-muted/30 -mx-4 px-4 py-20">
+        <section className="mb-20 -mx-4 px-4 py-20 bg-accent">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -150,9 +150,11 @@ const Features = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="mb-20">
+        <section className="mb-20 bg-accent">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+
+Frequently Asked Questions</h2>
             <div className="space-y-6">
               <Card>
                 <CardContent className="pt-6">
