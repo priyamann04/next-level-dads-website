@@ -69,7 +69,7 @@ const GetInvolved = () => {
 
         {/* Community Impact */}
         <section className="max-w-4xl mx-auto mb-16">
-          <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2">
+          <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary">
             <CardContent className="pt-8">
               <h2 className="text-3xl font-bold mb-6 text-center">
                 Your Impact Matters
