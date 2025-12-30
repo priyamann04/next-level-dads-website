@@ -227,7 +227,7 @@ const Features = () => {
                     Share your thoughts by filling out our feedback form.
                   </p>
                   <Button asChild variant="outline" className="w-full">
-                    <a href="https://forms.gle/feedback" target="_blank" rel="noopener noreferrer" className="bg-primary">
+                    <a href="https://forms.gle/kFXuhWFceWyf3vjw6" target="_blank" rel="noopener noreferrer" className="bg-primary">
                       Give Feedback
                     </a>
                   </Button>
