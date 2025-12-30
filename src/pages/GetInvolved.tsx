@@ -47,15 +47,15 @@ const GetInvolved = () => {
 
         {/* Opportunities Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
-          {opportunities.map((opportunity, index) => <Card key={index} className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg">
+          {opportunities.map((opportunity, index) => <Card key={index} className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg flex flex-col h-full">
               <CardHeader>
                 <div className={`w-12 h-12 rounded-full ${opportunity.bgColor} flex items-center justify-center mb-4`}>
                   <opportunity.icon className={`h-6 w-6 ${opportunity.color}`} />
                 </div>
                 <CardTitle className="text-2xl">{opportunity.title}</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="space-y-4 flex flex-col flex-grow">
+                <p className="text-muted-foreground leading-relaxed flex-grow">
                   {opportunity.description}
                 </p>
                 <Button asChild variant="default" className="w-full">
