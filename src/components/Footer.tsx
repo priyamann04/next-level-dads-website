@@ -13,10 +13,31 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-wrap justify-center gap-2 text-sm">
             <Link
+              to="/"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Home
+            </Link>
+            <span className="text-muted-foreground">•</span>
+            <Link
               to="/about"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               About
+            </Link>
+            <span className="text-muted-foreground">•</span>
+            <Link
+              to="/features"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Next Level Dads App
+            </Link>
+            <span className="text-muted-foreground">•</span>
+            <Link
+              to="/get-involved"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Get Involved
             </Link>
             <span className="text-muted-foreground">•</span>
             <Link
@@ -25,20 +46,6 @@ const Footer = () => {
             >
               Contact
             </Link>
-            <span className="text-muted-foreground">•</span>
-            <a
-              href="#"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Privacy Policy
-            </a>
-            <span className="text-muted-foreground">•</span>
-            <a
-              href="#"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Terms
-            </a>
           </div>
 
           {/* Email */}
