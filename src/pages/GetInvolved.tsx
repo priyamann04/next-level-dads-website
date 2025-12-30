@@ -7,7 +7,7 @@ const GetInvolved = () => {
     title: "Volunteer",
     description: "Help us build a welcoming community for dads. Volunteer in outreach, design, marketing or software development. Roles are flexible and designed to fit your schedule.",
     action: "Volunteer Application",
-    link: "https://forms.google.com/volunteer",
+    link: "https://forms.gle/5Eh7Zfdt6J69ri4u6",
     color: "text-primary",
     bgColor: "bg-primary/10"
   }, {
