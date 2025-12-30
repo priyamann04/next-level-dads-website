@@ -31,7 +31,7 @@ const GetInvolved = () => {
     title: "Host an Event",
     description: "Use the Next Level Dads app to host a group chat, virtual meetup, or local gathering for fathers. We will work with you to set up the event and make it easy for dads to join and connect.",
     action: "Event Form",
-    link: "https://forms.google.com/event",
+    link: "https://forms.gle/3hjzXi1RGPG1deAY7",
     color: "text-primary",
     bgColor: "bg-primary/10"
   }];
