@@ -13,13 +13,7 @@ import {
 // @route POST /api/messages
 // @access Public
 const sendMessage = asyncHandler(async (req, res) => {
-  if (
-    !req.body ||
-    !req.body.name ||
-    !req.body.email ||
-    !req.body.subject ||
-    !req.body.message
-  ) {
+  if (!req.body) {
     res.status(400)
     throw new Error('Missing fields')
   }
@@ -28,6 +22,11 @@ const sendMessage = asyncHandler(async (req, res) => {
   const email = req.body.email.trim().toLowerCase()
   const subject = req.body.subject.trim()
   const message = req.body.message.trim()
+
+  if (!name || !email || !subject || !message) {
+    res.status(400)
+    throw new Error('Missing fields')
+  }
 
   if (!validator.isEmail(email)) {
     res.status(400)
@@ -73,7 +72,7 @@ const sendMessage = asyncHandler(async (req, res) => {
 // @route POST /api/mailing-list
 // @access Public
 const addToMailingList = asyncHandler(async (req, res) => {
-  if (!req.body?.email) {
+  if (!req.body?.email?.trim()) {
     res.status(400)
     throw new Error('Missing fields')
   }

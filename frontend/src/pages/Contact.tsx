@@ -1,46 +1,161 @@
-import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, Phone } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { useState } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Label } from '@/components/ui/label'
+import { Mail, Phone } from 'lucide-react'
+import { useToast } from '@/hooks/use-toast'
+import axios from 'axios'
+import validator from 'validator'
+import {
+  MAX_NAME_LENGTH,
+  MAX_SUBJECT_LENGTH,
+  MAX_MESSAGE_LENGTH,
+} from '@/config/constants'
 
 const Contact = () => {
-  const { toast } = useToast();
+  const { toast } = useToast()
+  const [email, setEmail] = useState('')
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const lengthLimits = {
+    name: MAX_NAME_LENGTH,
+    subject: MAX_SUBJECT_LENGTH,
+    message: MAX_MESSAGE_LENGTH,
+  }
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
-
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
-  };
-
-  const handleChange = (
+  const handleFormChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+      [e.target.name]:
+        e.target.name === 'email'
+          ? e.target.value
+          : e.target.value.slice(0, lengthLimits[e.target.name]),
+    })
+  }
+
+  const handleSubmitForm = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    const name = formData.name.trim()
+    const email = formData.email.trim().toLowerCase()
+    const subject = formData.subject.trim()
+    const message = formData.message.trim()
+
+    if (!name || !email || !subject || !message) {
+      toast({
+        title: 'Error',
+        description: 'Please fill in all required fields.',
+        variant: 'destructive',
+      })
+      setIsSubmitting(false)
+      return
+    }
+
+    if (!validator.isEmail(email)) {
+      toast({
+        title: 'Error',
+        description: 'Please enter a valid email address.',
+        variant: 'destructive',
+      })
+      setIsSubmitting(false)
+      return
+    }
+
+    try {
+      await axios.post(
+        '/api/messages',
+        {
+          name,
+          email,
+          subject,
+          message,
+        },
+        {
+          timeout: 5000,
+        }
+      )
+      setFormData({ name: '', email: '', subject: '', message: '' })
+      toast({
+        title: 'Message sent!',
+        description:
+          "Thank you for reaching out. We'll get back to you as soon as possible.",
+      })
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: `${
+          error.response?.data?.message ||
+          'Failed to send message. Please try again later.'
+        }`,
+        variant: 'destructive',
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleSubmitEmail = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    const emailCleaned = email.trim().toLowerCase()
+
+    if (!emailCleaned) {
+      toast({
+        title: 'Error',
+        description: 'Please enter your email address.',
+        variant: 'destructive',
+      })
+      setIsSubmitting(false)
+      return
+    }
+
+    if (!validator.isEmail(emailCleaned)) {
+      toast({
+        title: 'Error',
+        description: 'Please enter a valid email address.',
+        variant: 'destructive',
+      })
+      setIsSubmitting(false)
+      return
+    }
+
+    try {
+      await axios.post(
+        '/api/mailing-list',
+        { email: emailCleaned },
+        { timeout: 5000 }
+      )
+      toast({
+        title: 'Subscribed!',
+        description:
+          'You have been added to our mailing list. Stay tuned for updates!',
+      })
+      setEmail('')
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: `${
+          error.response?.data?.message ||
+          'Failed to subscribe. Please try again later.'
+        }`,
+        variant: 'destructive',
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <div className="min-h-screen py-20">
@@ -49,8 +164,8 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
           <p className="text-xl text-muted-foreground">
-            Have questions, suggestions, or want to learn more? We'd love to hear
-            from you.
+            Have questions, suggestions, or want to learn more? We'd love to
+            hear from you.
           </p>
         </div>
 
@@ -96,16 +211,27 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Stay informed about app updates, events, and ways to get involved.
+                  Stay informed about app updates, events, and ways to get
+                  involved.
                 </p>
-                <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+                <form
+                  className="space-y-3"
+                  onSubmit={handleSubmitEmail}
+                >
                   <Input
                     type="email"
                     placeholder="Your email"
                     className="w-full"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
-                  <Button type="submit" className="w-full">
-                    Subscribe
+                  <Button
+                    type="submit"
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Subscribing...' : 'Subscribe'}
                   </Button>
                 </form>
               </CardContent>
@@ -118,7 +244,10 @@ const Contact = () => {
               <CardTitle className="text-2xl">Send Us a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                onSubmit={handleSubmitForm}
+                className="space-y-6"
+              >
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name *</Label>
@@ -126,7 +255,7 @@ const Contact = () => {
                       id="name"
                       name="name"
                       value={formData.name}
-                      onChange={handleChange}
+                      onChange={handleFormChange}
                       required
                       placeholder="Your full name"
                     />
@@ -138,7 +267,7 @@ const Contact = () => {
                       name="email"
                       type="email"
                       value={formData.email}
-                      onChange={handleChange}
+                      onChange={handleFormChange}
                       required
                       placeholder="your.email@example.com"
                     />
@@ -151,7 +280,7 @@ const Contact = () => {
                     id="subject"
                     name="subject"
                     value={formData.subject}
-                    onChange={handleChange}
+                    onChange={handleFormChange}
                     required
                     placeholder="What's this about?"
                   />
@@ -163,7 +292,7 @@ const Contact = () => {
                     id="message"
                     name="message"
                     value={formData.message}
-                    onChange={handleChange}
+                    onChange={handleFormChange}
                     required
                     placeholder="Tell us more about your inquiry..."
                     className="min-h-[150px]"
@@ -176,12 +305,12 @@ const Contact = () => {
                   className="w-full"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
-                  By submitting this form, you agree to be contacted by Next Level
-                  Dads regarding your inquiry.
+                  By submitting this form, you agree to be contacted by Next
+                  Level Dads regarding your inquiry.
                 </p>
               </form>
             </CardContent>
@@ -189,7 +318,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
