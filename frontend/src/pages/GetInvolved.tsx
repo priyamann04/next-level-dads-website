@@ -1,56 +1,84 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Heart, Handshake, DollarSign, Calendar } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Heart, Handshake, DollarSign, Calendar } from 'lucide-react'
+import { getIsInitialized, trackEvent } from '../utils/analytics'
+
+const trackButtonClick = (buttonLabel: string) => {
+  if (getIsInitialized()) {
+    trackEvent('Button', 'Click', buttonLabel)
+  }
+}
+
 const GetInvolved = () => {
-  const opportunities = [{
-    icon: Heart,
-    title: "Volunteer",
-    description: "Help us build a welcoming community for dads. Volunteer in outreach, design, marketing or software development. Roles are flexible and designed to fit your schedule.",
-    action: "Volunteer Application",
-    link: "https://forms.gle/5Eh7Zfdt6J69ri4u6",
-    color: "text-primary",
-    bgColor: "bg-primary/10"
-  }, {
-    icon: Handshake,
-    title: "Partner with Us",
-    description: "Are you an organization that supports dads or parents? Partner with Next Level Dads to reach more fathers, share resources, and create more opportunities for connection.",
-    action: "Partnership Inquiry",
-    link: "https://forms.gle/4EZQcPBsGSzGSnTr6",
-    color: "text-primary",
-    bgColor: "bg-primary/10"
-  }, {
-    icon: DollarSign,
-    title: "Support Our Mission",
-    description: "Help us reach more dads across Canada so they can find community and support. You can sponsor outreach, help cover app costs, or provide non-monetary support (e.g. printing or venues).",
-    action: "Make a Contribution",
-    link: "https://forms.gle/ihjQ1n8C3dEfGiwM6",
-    color: "text-primary",
-    bgColor: "bg-primary/10"
-  }, {
-    icon: Calendar,
-    title: "Host an Event",
-    description: "Host a meetup or local gathering for fathers. Submit an event request and we'll help get it set up and shared with the Next Level Dads community.",
-    action: "Event Form",
-    link: "https://forms.gle/3hjzXi1RGPG1deAY7",
-    color: "text-primary",
-    bgColor: "bg-primary/10"
-  }];
-  return <div className="min-h-screen py-20">
+  const opportunities = [
+    {
+      icon: Heart,
+      title: 'Volunteer',
+      description:
+        'Help us build a welcoming community for dads. Volunteer in outreach, design, marketing or software development. Roles are flexible and designed to fit your schedule.',
+      action: 'Volunteer Application',
+      link: 'https://forms.gle/5Eh7Zfdt6J69ri4u6',
+      color: 'text-primary',
+      bgColor: 'bg-primary/10',
+    },
+    {
+      icon: Handshake,
+      title: 'Partner with Us',
+      description:
+        'Are you an organization that supports dads or parents? Partner with Next Level Dads to reach more fathers, share resources, and create more opportunities for connection.',
+      action: 'Partnership Inquiry',
+      link: 'https://forms.gle/4EZQcPBsGSzGSnTr6',
+      color: 'text-primary',
+      bgColor: 'bg-primary/10',
+    },
+    {
+      icon: DollarSign,
+      title: 'Support Our Mission',
+      description:
+        'Help us reach more dads across Canada so they can find community and support. You can sponsor outreach, help cover app costs, or provide non-monetary support (e.g. printing or venues).',
+      action: 'Make a Contribution',
+      link: 'https://forms.gle/ihjQ1n8C3dEfGiwM6',
+      color: 'text-primary',
+      bgColor: 'bg-primary/10',
+    },
+    {
+      icon: Calendar,
+      title: 'Host an Event',
+      description:
+        "Host a meetup or local gathering for fathers. Submit an event request and we'll help get it set up and shared with the Next Level Dads community.",
+      action: 'Event Form',
+      link: 'https://forms.gle/3hjzXi1RGPG1deAY7',
+      color: 'text-primary',
+      bgColor: 'bg-primary/10',
+    },
+  ]
+  return (
+    <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Get Involved</h1>
           <p className="text-xl text-muted-foreground">
-            There are many ways to support our mission of helping fathers feel connected, supported, and seen. Choose the opportunity that is right for you.
+            There are many ways to support our mission of helping fathers feel
+            connected, supported, and seen. Choose the opportunity that is right
+            for you.
           </p>
         </div>
 
         {/* Opportunities Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
-          {opportunities.map((opportunity, index) => <Card key={index} className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg flex flex-col h-full">
+          {opportunities.map((opportunity, index) => (
+            <Card
+              key={index}
+              className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg flex flex-col h-full"
+            >
               <CardHeader>
-                <div className={`w-12 h-12 rounded-full ${opportunity.bgColor} flex items-center justify-center mb-4`}>
-                  <opportunity.icon className={`h-6 w-6 ${opportunity.color}`} />
+                <div
+                  className={`w-12 h-12 rounded-full ${opportunity.bgColor} flex items-center justify-center mb-4`}
+                >
+                  <opportunity.icon
+                    className={`h-6 w-6 ${opportunity.color}`}
+                  />
                 </div>
                 <CardTitle className="text-2xl">{opportunity.title}</CardTitle>
               </CardHeader>
@@ -58,13 +86,31 @@ const GetInvolved = () => {
                 <p className="text-muted-foreground leading-relaxed flex-grow">
                   {opportunity.description}
                 </p>
-                <Button asChild variant="default" className="w-full">
-                  <a href={opportunity.link} target={opportunity.link.startsWith("http") ? "_blank" : undefined} rel={opportunity.link.startsWith("http") ? "noopener noreferrer" : undefined}>
+                <Button
+                  asChild
+                  variant="default"
+                  className="w-full"
+                  onClick={() => {
+                    trackButtonClick(opportunity.title)
+                  }}
+                >
+                  <a
+                    href={opportunity.link}
+                    target={
+                      opportunity.link.startsWith('http') ? '_blank' : undefined
+                    }
+                    rel={
+                      opportunity.link.startsWith('http')
+                        ? 'noopener noreferrer'
+                        : undefined
+                    }
+                  >
                     {opportunity.action}
                   </a>
                 </Button>
               </CardContent>
-            </Card>)}
+            </Card>
+          ))}
         </div>
 
         {/* Community Impact */}
@@ -76,10 +122,15 @@ const GetInvolved = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Every hour volunteered, every connection formed, every dollar contributed and every event hosted helps us reach more fathers and build a stronger community of support.
+                  Every hour volunteered, every connection formed, every dollar
+                  contributed and every event hosted helps us reach more fathers
+                  and build a stronger community of support.
                 </p>
                 <p>
-                  Whether you have time, skills, resources, or ideas to share, there is a meaningful way for you to get involved. Together, we are creating a future where every dad has the connection and encouragement he needs to thrive.
+                  Whether you have time, skills, resources, or ideas to share,
+                  there is a meaningful way for you to get involved. Together,
+                  we are creating a future where every dad has the connection
+                  and encouragement he needs to thrive.
                 </p>
               </div>
             </CardContent>
@@ -113,15 +164,26 @@ const GetInvolved = () => {
                   <ul className="space-y-1 text-muted-foreground">
                     <li>• Leadership experience</li>
                     <li>• Social entrepreneurship skills</li>
-                    
+
                     <li>• Portfolio projects</li>
                     <li>• Making real impact</li>
                   </ul>
                 </div>
               </div>
               <div className="pt-4 text-center">
-                <Button asChild size="lg" className="w-full md:w-auto">
-                  <a href="https://forms.gle/dAB75W2hFw8RUKwy6" target="_blank" rel="noopener noreferrer">
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full md:w-auto"
+                  onClick={() => {
+                    trackButtonClick('Apply to Join Our Team')
+                  }}
+                >
+                  <a
+                    href="https://forms.gle/dAB75W2hFw8RUKwy6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Apply to Join Our Team
                   </a>
                 </Button>
@@ -130,6 +192,7 @@ const GetInvolved = () => {
           </Card>
         </section>
       </div>
-    </div>;
-};
-export default GetInvolved;
+    </div>
+  )
+}
+export default GetInvolved
