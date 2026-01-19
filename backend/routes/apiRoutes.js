@@ -11,6 +11,7 @@ const messageLimiter = rateLimit({
   max: MESSAGE_RATE_LIMIT_MAX_REQUESTS_PER_15_MINS,
   statusCode: 429,
   message: 'Too many messages sent. Please wait before trying again.',
+  skip: () => process.env.NODE_ENV !== 'production',
 })
 
 const mailingListLimiter = rateLimit({
@@ -18,6 +19,7 @@ const mailingListLimiter = rateLimit({
   max: MAILING_LIST_RATE_LIMIT_MAX_REQUESTS_PER_15_MINS,
   statusCode: 429,
   message: 'Too many signup attempts. Please wait before trying again.',
+  skip: () => process.env.NODE_ENV !== 'production',
 })
 
 const router = express.Router()
