@@ -25,14 +25,12 @@ initializeGA()
 const queryClient = new QueryClient()
 
 const usePageViews = () => {
-  if (process.env.NODE_ENV !== 'production') return
+  if (!getIsInitialized()) return
 
   const location = useLocation()
 
   useEffect(() => {
-    if (getIsInitialized()) {
-      trackPageView(location.pathname)
-    }
+    trackPageView(location.pathname)
   }, [location])
 }
 

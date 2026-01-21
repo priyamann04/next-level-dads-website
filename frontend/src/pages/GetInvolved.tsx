@@ -1,12 +1,37 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Heart, Handshake, DollarSign, Calendar } from 'lucide-react'
-import { getIsInitialized, trackEvent } from '../utils/analytics'
+import { trackEvent } from '../utils/analytics'
+
+const EVENTS = {
+  Volunteer: {
+    eventName: 'open_volunteer_form',
+    contentID: 'volunteer',
+  },
+  'Partner with Us': {
+    eventName: 'open_partnership_form',
+    contentID: 'partner_with_us',
+  },
+  'Support Our Mission': {
+    eventName: 'open_contribution_form',
+    contentID: 'support_our_mission',
+  },
+  'Host an Event': {
+    eventName: 'open_event_form',
+    contentID: 'host_an_event',
+  },
+  'Join Our Team': {
+    eventName: 'open_volunteer_form',
+    contentID: 'join_our_team',
+  },
+}
 
 const trackButtonClick = (buttonLabel: string) => {
-  if (getIsInitialized()) {
-    trackEvent('Button', 'Click', buttonLabel)
-  }
+  const { eventName, contentID } = EVENTS[buttonLabel]
+  trackEvent(eventName, {
+    content_id: contentID,
+    page_title: 'Get Involved',
+  })
 }
 
 const GetInvolved = () => {
@@ -176,7 +201,7 @@ const GetInvolved = () => {
                   size="lg"
                   className="w-full md:w-auto"
                   onClick={() => {
-                    trackButtonClick('Apply to Join Our Team')
+                    trackButtonClick('Join Our Team')
                   }}
                 >
                   <a
