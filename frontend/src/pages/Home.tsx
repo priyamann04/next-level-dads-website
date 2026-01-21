@@ -2,12 +2,33 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Users, Heart, MessageCircle } from 'lucide-react'
-import { getIsInitialized, trackEvent } from '../utils/analytics'
+import { trackEvent } from '../utils/analytics'
+
+const EVENTS = {
+  'Watch Demo': {
+    eventName: 'watch_demo_video',
+    contentID: 'watch_demo',
+  },
+  'Try it Yourself': {
+    eventName: 'try_app_demo',
+    contentID: 'try_it_yourself',
+  },
+  'Interest Form': {
+    eventName: 'open_interest_form',
+    contentID: 'interest_form',
+  },
+  'Feedback Form': {
+    eventName: 'open_feedback_form',
+    contentID: 'feedback_form',
+  },
+}
 
 const trackButtonClick = (buttonLabel: string) => {
-  if (getIsInitialized()) {
-    trackEvent('Button', 'Click', buttonLabel)
-  }
+  const { eventName, contentID } = EVENTS[buttonLabel]
+  trackEvent(eventName, {
+    content_id: contentID,
+    page_title: 'Home',
+  })
 }
 
 const Home = () => {

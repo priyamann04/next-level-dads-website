@@ -19,7 +19,11 @@ export const initializeGA = () => {
   }
 
   try {
-    ReactGA.initialize(import.meta.env.VITE_MEASUREMENT_ID)
+    ReactGA.initialize(import.meta.env.VITE_MEASUREMENT_ID, {
+      gaOptions: {
+        send_page_view: false, // disable automatic page-view tracking, could result in duplicate events
+      },
+    })
     isInitialized = true
   } catch (error) {
     console.error('Failed to initialize Google Analytics', error)
@@ -38,12 +42,8 @@ export const trackPageView = (page: string) => {
   })
 }
 
-export const trackEvent = (category: string, action: string, label: string) => {
+export const trackEvent = (eventName: string, params?: Record<string, any>) => {
   if (!isInitialized) return
 
-  ReactGA.event({
-    category,
-    action,
-    label,
-  })
+  ReactGA.event(eventName, params)
 }
