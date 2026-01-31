@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
-import { Mail, Phone } from 'lucide-react'
+import { Mail, Phone, Instagram, Facebook, Linkedin } from 'lucide-react'
 import { useToast } from '@/hooks/use-toast'
 import axios from 'axios'
 import validator from 'validator'
@@ -199,6 +199,49 @@ const Contact = () => {
                       <p className="text-sm text-muted-foreground">
                         We usually respond within 1–2 business days
                       </p>
+                    </div>
+                  </div>
+
+                  {/* Social Media */}
+                  <div className="pt-4 border-t border-border">
+                    <h3 className="font-semibold mb-3">Follow Us</h3>
+                    <div className="space-y-3">
+                      <a
+                        href="https://www.instagram.com/next_level_dads/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Next Level Dads on Instagram"
+                        className="flex items-center space-x-3 text-sm text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                      >
+                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                          <Instagram className="h-4 w-4 text-primary" aria-hidden="true" />
+                        </div>
+                        <span>Instagram</span>
+                      </a>
+                      <a
+                        href="https://www.facebook.com/Nextleveldads/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Next Level Dads on Facebook"
+                        className="flex items-center space-x-3 text-sm text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                      >
+                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                          <Facebook className="h-4 w-4 text-primary" aria-hidden="true" />
+                        </div>
+                        <span>Facebook</span>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/company/next-level-dads/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Next Level Dads on LinkedIn"
+                        className="flex items-center space-x-3 text-sm text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                      >
+                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                          <Linkedin className="h-4 w-4 text-primary" aria-hidden="true" />
+                        </div>
+                        <span>LinkedIn</span>
+                      </a>
                     </div>
                   </div>
                 </div>
