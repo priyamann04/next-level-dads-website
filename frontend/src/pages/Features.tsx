@@ -382,17 +382,6 @@ const Features = () => {
                 </CardContent>
               </Card>
             </div>
-
-            {/* Raffle Banner */}
-            <div className="backdrop-blur rounded-xl p-6 text-center bg-destructive-foreground">
-              <p className="text-primary-foreground/80 text-sm">
-                As a thank-you for participating, everyone who completes the
-                feedback form by 11:59 PM on February 15, 2026 will be entered
-                into a raffle to win a{' '}
-                <span className="font-medium">$25 Amazon gift card</span>. The
-                winner will be selected randomly and contacted by email.
-              </p>
-            </div>
           </div>
         </section>
       </div>

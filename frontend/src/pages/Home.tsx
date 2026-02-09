@@ -146,10 +146,7 @@ const Home = () => {
               This demo offers an early look at the experience. You can watch a
               walkthrough, explore a clickable preview of the app, sign up for
               updates through the interest form, or share your thoughts using
-              the feedback form to help guide what we build next. As a thank
-              you, anyone who completes the feedback form by 11:59 PM on
-              February 15, 2026 will be entered into a raffle to win a $25
-              Amazon gift card.
+              the feedback form to help guide what we build next.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
