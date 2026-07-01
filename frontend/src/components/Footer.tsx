@@ -48,6 +48,30 @@ const Footer = () => {
             </Link>
           </div>
 
+          {/* Legal Links */}
+          <div className="flex flex-wrap justify-center gap-2 text-sm">
+            <Link
+              to="/terms"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Terms & Conditions
+            </Link>
+            <span className="text-muted-foreground">•</span>
+            <Link
+              to="/privacy"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-muted-foreground">•</span>
+            <Link
+              to="/community-guidelines"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Community Guidelines
+            </Link>
+          </div>
+
           {/* Email */}
           <a
             href="mailto:info@nextleveldads.ca"

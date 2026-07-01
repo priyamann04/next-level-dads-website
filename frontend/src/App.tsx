@@ -11,6 +11,9 @@ import About from './pages/About'
 import Features from './pages/Features'
 import GetInvolved from './pages/GetInvolved'
 import Contact from './pages/Contact'
+import Terms from './pages/Terms'
+import Privacy from './pages/Privacy'
+import CommunityGuidelines from './pages/CommunityGuidelines'
 import NotFound from './pages/NotFound'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -63,6 +66,18 @@ const AppContent = () => {
             <Route
               path="/contact"
               element={<Contact />}
+            />
+            <Route
+              path="/terms"
+              element={<Terms />}
+            />
+            <Route
+              path="/privacy"
+              element={<Privacy />}
+            />
+            <Route
+              path="/community-guidelines"
+              element={<CommunityGuidelines />}
             />
             <Route
               path="*"
