@@ -33,8 +33,14 @@ const Terms = () => {
                 >
                   https://nextleveldads.ca/
                 </a>
-                , web application [INSERT LINK], and any related services,
-                products, or content offered by{' '}
+                , web application{' '}
+                <a
+                  href="https://app.nextleveldads.ca/"
+                  className="font-bold text-primary hover:underline"
+                >
+                  https://app.nextleveldads.ca/
+                </a>
+                , and any related services, products, or content offered by{' '}
                 <strong className="text-foreground">Next Level Dads</strong>{' '}
                 (collectively, the "Service").
               </p>

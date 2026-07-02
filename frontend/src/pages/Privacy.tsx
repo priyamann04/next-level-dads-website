@@ -30,8 +30,14 @@ const Privacy = () => {
                 >
                   https://nextleveldads.ca/
                 </a>
-                , web application [INSERT LINK], and related services
-                (collectively, the "Service").
+                , web application{' '}
+                <a
+                  href="https://app.nextleveldads.ca/"
+                  className="text-primary hover:underline"
+                >
+                  https://app.nextleveldads.ca/
+                </a>
+                , and related services (collectively, the "Service").
               </p>
               <p className="mt-3">
                 This Privacy Policy applies to personal information collected
