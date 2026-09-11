@@ -1,222 +1,72 @@
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Users, Heart, MessageCircle } from 'lucide-react'
-import { trackEvent } from '../utils/analytics'
-
-const EVENTS = {
-  'Watch Demo': {
-    eventName: 'watch_demo_video',
-    contentID: 'watch_demo',
-  },
-  'Try it Yourself': {
-    eventName: 'try_app_demo',
-    contentID: 'try_it_yourself',
-  },
-  'Interest Form': {
-    eventName: 'open_interest_form',
-    contentID: 'interest_form',
-  },
-  'Feedback Form': {
-    eventName: 'open_feedback_form',
-    contentID: 'feedback_form',
-  },
-}
-
-const trackButtonClick = (buttonLabel: string) => {
-  const { eventName, contentID } = EVENTS[buttonLabel]
-  trackEvent(eventName, {
-    content_id: contentID,
-    page_title: 'Home',
-  })
-}
+import originalLogo from '@/assets/logo.png'
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-background via-accent/20 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 text-primary">
-              Next Level Dads
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
-              Connect with fathers to find friendship, community, and belonging.
-              One connection at a time.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-              <Button
-                asChild
-                size="lg"
-                className="text-lg"
-              >
-                <Link to="/features#explore-demo">Explore the Demo</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="text-lg"
-              >
-                <Link to="/features">Learn More</Link>
-              </Button>
+    <div className="relative min-h-screen overflow-hidden bg-[#f4f1ed] px-4 py-8 md:px-8 lg:px-12">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -left-16 top-6 h-[22rem] w-[22rem] rounded-full bg-[#c7a46a]/40 blur-3xl" />
+        <div className="absolute right-4 top-14 h-[28rem] w-[28rem] rounded-full bg-[#d9c7a4]/45 blur-3xl" />
+        <div className="absolute bottom-[-3rem] left-1/3 h-[24rem] w-[24rem] rounded-full bg-[#1a1b1a]/10 blur-3xl" />
+      </div>
+
+      <section className="relative z-10 mx-auto flex min-h-[75vh] max-w-6xl items-center justify-center">
+        <div className="flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:gap-10">
+          <div className="flex flex-col items-start justify-center lg:items-start">
+            <div className="mb-2 flex flex-col items-start leading-none">
+              <div className="relative inline-block">
+                <div className="select-none text-[3.1rem] font-black tracking-[-0.08em] text-[#c7a46a] sm:text-[4rem] md:text-[5.2rem] lg:text-[6.8rem]">
+                  NEXT
+                </div>
+              </div>
+              <div className="mt-0 rounded-md bg-[#c7a46a] px-3 py-2 text-[#1a1b1a] shadow-sm sm:px-4 md:px-5">
+                <div className="select-none text-[1.8rem] font-black tracking-[-0.08em] sm:text-[2.2rem] md:text-[3rem] lg:text-[4rem]">
+                  LEVEL DADS
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Mission Section */}
-      <section className="py-20 pb-8 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
-            <p className="text-lg text-muted-foreground mb-4">
-              Next Level Dads is a social enterprise dedicated to helping
-              fathers build genuine, lasting connections. We believe that every
-              dad deserves friendship, community, and a sense of belonging.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              Our mission is to make it easier for dads to meet and support one
-              another through shared experiences and meaningful conversation,
-              both online and in person. By fostering real relationships, we aim
-              to reduce isolation, strengthen families, and build a community
-              where dads feel seen, valued, and connected.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="pt-8 pb-20 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-2 hover:border-primary transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Connection</h3>
-                  <p className="text-muted-foreground">
-                    Meet and connect with other dads, share experiences, and
-                    build lasting friendships in a supportive community.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:border-primary transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <MessageCircle className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Community</h3>
-                  <p className="text-muted-foreground">
-                    Meet other fathers locally through groups built around
-                    shared interests
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:border-primary transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Heart className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">Belonging</h3>
-                  <p className="text-muted-foreground">
-                    Find your place in a welcoming community where every dad is
-                    valued and supported on their unique journey.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="mt-6 space-y-1 text-left text-[1.8rem] font-medium leading-[1.05] tracking-[-0.04em] text-[#1a1b1a] md:text-[2.2rem] lg:text-[2.5rem]">
+              <p>Empowering fathers.</p>
+              <p>Building community.</p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-28 bg-primary">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Be the First to Explore the Demo
-            </h2>
-            <p className="text-lg text-primary-foreground/90 mb-8">
-              This demo offers an early look at the experience. You can watch a
-              walkthrough, explore a clickable preview of the app, sign up for
-              updates through the interest form, or share your thoughts using
-              the feedback form to help guide what we build next.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                variant="secondary"
-                className="text-lg bg-background text-foreground hover:bg-background/90"
-                onClick={() => {
-                  trackButtonClick('Watch Demo')
-                }}
-              >
-                <a
-                  href="https://drive.google.com/file/d/1YG2DGozy8nuG6PCLilz1zS9WwfcTYrqX/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Watch Demo
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="secondary"
-                className="text-lg bg-background text-foreground hover:bg-background/90"
-                onClick={() => {
-                  trackButtonClick('Try it Yourself')
-                }}
-              >
-                <a
-                  href="https://next-level-dads-app.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Try it Yourself
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-                onClick={() => {
-                  trackButtonClick('Interest Form')
-                }}
-              >
-                <a
-                  href="https://forms.gle/sK8RQfJwJUo2QDGg9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Interest Form
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-                onClick={() => {
-                  trackButtonClick('Feedback Form')
-                }}
-              >
-                <a
-                  href="https://forms.gle/kFXuhWFceWyf3vjw6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Feedback Form
-                </a>
-              </Button>
+            <Button
+              asChild
+              size="lg"
+              className="mt-6 h-12 rounded-full bg-[#c7a46a] px-7 text-sm font-semibold text-[#1a1b1a] shadow-none transition-opacity hover:bg-[#bb955d] sm:text-base"
+            >
+              <Link to="/features">Try our app!</Link>
+            </Button>
+          </div>
+
+          <div className="flex items-center justify-center lg:justify-end">
+            <div className="relative h-[430px] w-[260px] rounded-[2.2rem] border-[10px] border-[#2d2d2d] bg-white shadow-[0_24px_40px_rgba(0,0,0,0.18)] sm:h-[500px] sm:w-[300px]">
+              <div className="absolute left-1/2 top-3 h-2.5 w-16 -translate-x-1/2 rounded-full bg-[#2d2d2d]" />
+              <div className="absolute left-1/2 top-8 h-2.5 w-20 -translate-x-1/2 rounded-full bg-[#2d2d2d]/80" />
+
+              <div className="flex h-full flex-col items-center justify-start px-4 pb-5 pt-10">
+                <img
+                  src={originalLogo}
+                  alt="Next Level Dads"
+                  className="w-[92%] max-w-[220px] object-contain"
+                />
+
+                <div className="mt-7 text-center text-[1rem] font-medium leading-snug text-[#1a1b1a] sm:text-[1.15rem]">
+                  <p>Empowering Fathers.</p>
+                  <p>Building Community.</p>
+                </div>
+
+                <div className="mt-7 flex w-full flex-col gap-3">
+                  <button className="h-11 rounded-full bg-[#c7a46a] text-sm font-semibold text-[#1a1b1a] shadow-sm transition-opacity hover:opacity-95">
+                    Continue with Email
+                  </button>
+                  <button className="h-11 rounded-full border border-[#d4d0ca] bg-white text-sm font-medium text-[#1a1b1a] shadow-sm transition-opacity hover:opacity-95">
+                    Continue with Google
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -224,4 +74,5 @@ const Home = () => {
     </div>
   )
 }
+
 export default Home

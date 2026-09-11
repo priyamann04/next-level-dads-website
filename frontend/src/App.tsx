@@ -9,8 +9,9 @@ import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import About from './pages/About'
 import Features from './pages/Features'
-import GetInvolved from './pages/GetInvolved'
-import Contact from './pages/Contact'
+import ForDads from './pages/ForDads'
+import ForBusinesses from './pages/ForBusinesses'
+import ForStudents from './pages/ForStudents'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
 import CommunityGuidelines from './pages/CommunityGuidelines'
@@ -59,14 +60,9 @@ const AppContent = () => {
               path="/features"
               element={<Features />}
             />
-            <Route
-              path="/get-involved"
-              element={<GetInvolved />}
-            />
-            <Route
-              path="/contact"
-              element={<Contact />}
-            />
+            <Route path="/for-dads" element={<ForDads />} />
+            <Route path="/for-businesses" element={<ForBusinesses />} />
+            <Route path="/for-students" element={<ForStudents />} />
             <Route
               path="/terms"
               element={<Terms />}
