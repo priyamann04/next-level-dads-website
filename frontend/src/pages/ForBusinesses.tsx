@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import partnershipImage from "@/assets/NLD-Partnership-Image.png";
 
 const ForBusinesses = () => {
   return (
@@ -25,12 +26,12 @@ const ForBusinesses = () => {
             </div>
 
             <h1 className="mt-7 text-3xl font-black tracking-[-0.04em] text-[#1a1b1a] md:text-4xl">
-              Partner with us.
+              Partner with us
             </h1>
             <p className="mt-4 max-w-lg text-lg leading-relaxed text-[#1a1b1a]/75 md:text-xl">
-              Are you an organization that supports dads or parents? Partner
-              with Next Level Dads to reach more fathers, share resources, and
-              create more opportunities for connection.
+              We’re looking to work with organizations that support fathers,
+              parents, and families. Together, we can share resources, create
+              opportunities for connection, and build stronger communities for dads.
             </p>
 
             <Button
@@ -50,12 +51,18 @@ const ForBusinesses = () => {
           </div>
 
           <div className="flex w-full max-w-xl items-center justify-center">
-            <img
-              src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1200&q=85"
-              alt="Business partners shaking hands"
-              loading="lazy"
-              className="aspect-[4/3] w-full rounded-2xl object-cover shadow-[0_24px_40px_rgba(0,0,0,0.18)]"
-            />
+            {/* Exclude transparent export margins and retain the existing photo box. */}
+            <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-[0_24px_40px_rgba(0,0,0,0.18)]">
+              <svg
+                viewBox="216 505 1728 1151"
+                preserveAspectRatio="xMidYMid slice"
+                role="img"
+                aria-label="Next Level Dads partnership discussion"
+                className="block h-full w-full"
+              >
+                <image href={partnershipImage} width="2160" height="2160" />
+              </svg>
+            </div>
           </div>
         </div>
       </section>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Users, Target, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import fatherSonImage from "@/assets/father-son.jpg";
-import teamImage from "@/assets/next-level-dads-team.png";
+import teamImage from "@/assets/Co-Founders-Team.png";
 
 const FadeInImage = ({
   src,
@@ -59,12 +59,12 @@ const About = () => {
       </div>
 
       {/* Header Section */}
-      <section className="relative z-10 bg-[#0f172a] py-10 md:py-12">
+      <section className="relative z-10 pb-4 pt-10 md:pb-6 md:pt-12">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl text-center">
-            <h1 className="text-[1.6rem] font-black tracking-[-0.03em] text-white md:text-[2.3rem] lg:text-[2.8rem]">
-              <span className="text-white">About </span>
-              <span className="text-[#f5d7a1]">Next Level Dads</span>
+            <h1 className="text-5xl font-black tracking-[-0.04em] text-[#1a1b1a] md:text-6xl lg:text-7xl">
+              <span>About </span>
+              <span className="text-[#c7a46a]">Next Level Dads</span>
             </h1>
           </div>
         </div>
@@ -279,11 +279,14 @@ const About = () => {
                   From an idea to a team
                 </h3>
 
-                <FadeInImage
-                  src={teamImage}
-                  alt="Next Level Dads team"
-                  className="mx-auto mb-6 h-auto w-full max-w-lg rounded-lg shadow-lg"
-                />
+                {/* Exclude the new export's transparent margins while retaining the photo layout. */}
+                <div className="relative mx-auto mb-6 aspect-[309/232] w-full max-w-lg overflow-hidden rounded-lg shadow-lg">
+                  <FadeInImage
+                    src={teamImage}
+                    alt="Next Level Dads co-founder team"
+                    className="absolute left-[-18.0214%] top-[-35.0841%] h-auto w-[136.1059%] max-w-none"
+                  />
+                </div>
 
                 <p>
                   Through Enactus and the broader University of Toronto community, I met other students who believed in what I was building and wanted to help bring it to life. Since then, Next Level Dads has grown into a team of UofT students working together to build the platform and the community around it.

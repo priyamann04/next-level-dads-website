@@ -1,0 +1,76 @@
+.nld-home-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nld-home-hero-copy {
+  justify-self: center;
+  width: max-content;
+  max-width: 100%;
+}
+
+.nld-home-hero-logo {
+  width: clamp(180px, 20vw, 280px);
+  max-width: 100%;
+  align-self: flex-start;
+  height: auto;
+}
+
+.nld-home-hero-headline {
+  font-size: clamp(1.875rem, 3.3vw, 3.2rem);
+}
+
+/* All three original PNGs stay sharp; only the side devices are rotated. */
+.nld-home-phones {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 1.17;
+  justify-self: center;
+}
+
+.nld-home-phone {
+  position: absolute;
+  filter: drop-shadow(0 14px 12px rgb(88 65 33 / 18%));
+}
+
+.nld-home-phone-discover {
+  z-index: 1;
+  left: 4%;
+  top: 9%;
+  width: 35%;
+  transform: rotate(-6deg);
+}
+
+.nld-home-phone-discussion {
+  z-index: 2;
+  right: 4%;
+  top: 9%;
+  width: 35%;
+  transform: rotate(6deg);
+}
+
+.nld-home-phone-main {
+  z-index: 3;
+  top: 0;
+  left: 29%;
+  width: 42%;
+}
+
+@media (min-width: 900px) {
+  .nld-home-hero-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr);
+    gap: clamp(16px, 2vw, 32px);
+  }
+
+  .nld-home-hero-copy {
+    justify-self: start;
+  }
+
+  .nld-home-phones {
+    max-width: none;
+  }
+}

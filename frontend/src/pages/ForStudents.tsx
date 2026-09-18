@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import teamImage from "@/assets/next-level-dads-team.png";
+import teamImage from "@/assets/NLD-Team-March.png";
 
 const ForStudents = () => {
   const roles = [
@@ -43,8 +43,7 @@ const ForStudents = () => {
               Help build the app and community.
             </h1>
             <p className="mt-4 max-w-lg text-lg leading-relaxed text-[#1a1b1a]/75 md:text-xl">
-              Join a team of students working together to create meaningful
-              connections for fathers.
+              Join a team of students helping us build meaningful connections for fathers.
             </p>
 
             <div className="mt-7 grid gap-x-8 gap-y-3 text-base text-[#1a1b1a] sm:grid-cols-2">
@@ -72,18 +71,22 @@ const ForStudents = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Apply to Join Our Team
+                Apply to Support Our Team
                 <ArrowUpRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </div>
 
           <div className="flex w-full max-w-xl items-center justify-center">
-            <img
-              src={teamImage}
-              alt="Next Level Dads student team"
+            {/* Exclude transparent export margins without modifying the photo. */}
+            <svg
+              viewBox="274 438 1611 1143"
+              role="img"
+              aria-label="Next Level Dads student team in March"
               className="w-full rounded-2xl shadow-[0_24px_40px_rgba(0,0,0,0.18)]"
-            />
+            >
+              <image href={teamImage} width="2160" height="2160" />
+            </svg>
           </div>
         </div>
       </section>

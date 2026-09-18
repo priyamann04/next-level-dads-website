@@ -1,0 +1,32 @@
+.nld-demo-scrubber {
+  touch-action: pan-y;
+}
+
+.nld-demo-scrubber::-webkit-slider-runnable-track {
+  height: 4px;
+  background: transparent;
+}
+
+.nld-demo-scrubber::-moz-range-track {
+  height: 4px;
+  background: transparent;
+}
+
+.nld-demo-scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  margin-top: -4px;
+  border: 1px solid #f4f1ed;
+  border-radius: 50%;
+  background: #c7a46a;
+}
+
+.nld-demo-scrubber::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #f4f1ed;
+  border-radius: 50%;
+  background: #c7a46a;
+}

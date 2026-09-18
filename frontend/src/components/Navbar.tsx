@@ -47,11 +47,11 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4">
+      <div className="w-full px-4 md:px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="Next Level Dads" className="h-12 w-auto" />
+          <Link to="/" className="flex shrink-0 items-center space-x-3">
+            <img src={logo} alt="Next Level Dads" className="h-12 w-auto md:h-auto md:w-[88px]" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -60,7 +60,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-base font-medium transition-colors hover:text-primary ${
                   isActive(link.path) ? "text-primary" : "text-foreground"
                 }`}
               >
@@ -70,7 +70,7 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger
                 onClick={handleAboutClick}
-                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${
+                className={`flex items-center gap-1 text-base font-medium transition-colors hover:text-primary ${
                   location.pathname === "/about"
                     ? "text-primary"
                     : "text-foreground"
@@ -89,7 +89,7 @@ const Navbar = () => {
             </DropdownMenu>
             <Link
               to="/features"
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-base font-medium transition-colors hover:text-primary ${
                 isActive("/features") ? "text-primary" : "text-foreground"
               }`}
             >
@@ -97,7 +97,7 @@ const Navbar = () => {
             </Link>
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${
+                className={`flex items-center gap-1 text-base font-medium transition-colors hover:text-primary ${
                   involvementOptions.some((option) => location.pathname === option.path)
                     ? "text-primary"
                     : "text-foreground"

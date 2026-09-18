@@ -1,5 +1,6 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ambassadorImage from "@/assets/NLD-Dad-Ambassador-Image.png";
 
 const ForDads = () => {
   return (
@@ -25,12 +26,13 @@ const ForDads = () => {
             </div>
 
             <h1 className="mt-7 text-3xl font-black tracking-[-0.04em] text-[#1a1b1a] md:text-4xl">
-              Host an event.
+              Become a Dad Ambassador
             </h1>
             <p className="mt-4 max-w-lg text-lg leading-relaxed text-[#1a1b1a]/75 md:text-xl">
-              Host a meetup or local gathering for fathers. Submit an event
-              request and we&apos;ll help get it set up and shared with the Next
-              Level Dads community.
+              Help other dads feel welcome and connected at Next Level Dads
+              meetups. Dad Ambassadors help bring people together, start
+              conversations, and create a welcoming space for fathers in their
+              community.
             </p>
 
             <Button
@@ -39,23 +41,29 @@ const ForDads = () => {
               className="mt-8 h-12 rounded-full bg-[#c7a46a] px-7 text-base font-semibold text-[#1a1b1a] shadow-none hover:bg-[#bb955d]"
             >
               <a
-                href="https://forms.gle/3hjzXi1RGPG1deAY7"
+                href="https://forms.gle/MoCoqFaCvBj1bbMj6"
                 target="_blank"
                 rel="noreferrer"
               >
-                Event Form
-                <ArrowUpRight className="ml-2 h-4 w-4" />
+                Become a Dad Ambassador
+                <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </div>
 
           <div className="flex w-full max-w-xl items-center justify-center">
-            <img
-              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=85"
-              alt="Food cooking on a BBQ grill"
-              loading="lazy"
-              className="aspect-[4/3] w-full rounded-2xl object-cover shadow-[0_24px_40px_rgba(0,0,0,0.18)]"
-            />
+            {/* Exclude transparent export margins and retain the existing photo box. */}
+            <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-[0_24px_40px_rgba(0,0,0,0.18)]">
+              <svg
+                viewBox="199 443 1729 1151"
+                preserveAspectRatio="xMidYMid slice"
+                role="img"
+                aria-label="Next Level Dads Dad Ambassador community"
+                className="block h-full w-full"
+              >
+                <image href={ambassadorImage} width="2160" height="2160" />
+              </svg>
+            </div>
           </div>
         </div>
       </section>
