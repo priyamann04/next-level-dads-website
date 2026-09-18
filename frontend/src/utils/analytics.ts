@@ -5,7 +5,6 @@ const PAGE_TITLES: Record<string, string> = {
   '/about': 'About',
   '/features': 'Features',
   '/get-involved': 'Get Involved',
-  '/contact': 'Contact',
 }
 
 let isInitialized: boolean = false

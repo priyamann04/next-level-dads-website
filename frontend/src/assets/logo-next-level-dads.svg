@@ -1,0 +1,24 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="500" fill="transparent"/>
+
+  <g>
+    <path d="M900 18L1178 18L1065 146H788L900 18Z" fill="#1A1A1A"/>
+    <path d="M700 18L978 18L865 146H588L700 18Z" fill="#1A1A1A"/>
+    <path d="M500 18L778 18L665 146H388L500 18Z" fill="#1A1A1A"/>
+    <path d="M300 18L578 18L465 146H188L300 18Z" fill="#1A1A1A"/>
+    <path d="M100 18L378 18L265 146H0L100 18Z" fill="#1A1A1A"/>
+  </g>
+
+  <g font-family="Arial Black, Impact, sans-serif" font-weight="900" letter-spacing="-16">
+    <text x="50" y="230" font-size="260" fill="#C9A766">NEXT</text>
+  </g>
+
+  <g>
+    <path d="M0 270H1200V470H0V270Z" fill="#C9A766"/>
+    <path d="M900 270L1200 270L1200 470L900 470L825 370L900 270Z" fill="#1A1A1A" opacity="0.14"/>
+  </g>
+
+  <g font-family="Arial Black, Impact, sans-serif" font-weight="900" letter-spacing="-14">
+    <text x="48" y="420" font-size="166" fill="#1A1A1A">LEVEL DADS</text>
+  </g>
+</svg>
