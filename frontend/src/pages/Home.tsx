@@ -26,7 +26,11 @@ const Home = () => {
               aria-label="Next Level Dads"
               className="nld-home-hero-logo block"
             >
-              <image href={logo} width="624" height="468" />
+              <image
+                href={logo}
+                width="624"
+                height="468"
+              />
             </svg>
 
             <h1 className="nld-home-hero-headline mt-3 text-left font-semibold leading-[1.12] tracking-[-0.04em] text-[#1a1b1a]">
@@ -39,7 +43,11 @@ const Home = () => {
               size="lg"
               className="mt-6 h-16 rounded-full bg-[#c7a46a] px-11 text-lg font-semibold text-[#1a1b1a] shadow-[0_6px_18px_-8px_rgba(139,104,48,0.4)] transition-colors hover:bg-[#bb955d] lg:text-xl"
             >
-              <a href="https://next-level-dads-app.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://app.nextleveldads.ca"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Try the app!
               </a>
             </Button>
